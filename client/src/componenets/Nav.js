@@ -1,45 +1,41 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import navData from "./nav-data";
+import { ReactComponent as Hamburger } from '../images/hamburger.svg';
+import './Nav.css'
 
-const nav = () => {
-    return (
-        <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <NavLink exact activeClassName="active_class" to="/">
-                        Exodus
-                    </NavLink>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item me-4">
-                                <NavLink exact activeClassName="active_class" to="/">
-                                    Home
-                                </NavLink>
-                            </li>
-                            <li class="nav-item me-4">
-                                <NavLink exact activeClassName="active_class" to="/about">
-                                    About
-                                </NavLink>
-                            </li>
-                            <li class="nav-item me-4">
-                                <NavLink exact activeClassName="active_class" to="/sub">
-                                    Submission
-                                </NavLink>
-                            </li>
-                            <li class="nav-item me-4">
-                                <NavLink exact activeClassName="active_class" to="/faq">
-                                    FAQ
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </>
-    );
-};
+function Navbar() {
 
-export default nav;
+  const toggle = () => {
+
+    const hamburger = document.querySelector('.navbar-list');
+
+    if (hamburger.style.display === '') {
+      hamburger.style.display = 'block';
+    }
+    else if (hamburger.style.display === 'block') {
+      hamburger.style.display = '';
+    }
+
+  }
+
+  return (
+    <nav className='nav-bar'>
+      <article className='exodus-logo-navbar'>
+        exodus <br /> &lt;/&gt;
+      </article>
+      <Hamburger onClick={toggle} className='hamburger' />
+      <ul className='navbar-list'>
+        {
+          navData.map((tabs) => {
+            return (
+              <li className='navbar-list-item'>
+                <a href="#">{tabs}</a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  );
+}
+
+export default Navbar;

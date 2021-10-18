@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar  */
+
+@import url('http://fonts.cdnfonts.com/css/a-atmospheric');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.nav-bar {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(213, 0, 249, 0.3) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  float: right;
+}
+
+.navbar-list-item {
+  text-transform: uppercase;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: #BF00FF;
+  transition: 200ms;
+}
+
+.navbar-list-item:hover {
+  color: #18FFFF;
+}
+
+.hamburger{
+  position: absolute;
+  width: 46.8px;
+  height: 26px;
+  right: 10px;
+  top: 20px;
+  display: none;
+}
+
+.exodus-logo-navbar{
+    font-family: 'a Atmospheric', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    color: #BF00FF;
+    position: absolute;
+    width: 170px;
+    height: 64px;
+    padding: 30px;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.12em;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .navbar-list-item {
+    padding: 25px;
+    font-size: 24px;
+  }
+
+  .exodus-logo-navbar{
+    padding: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  .navbar-list-item {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .nav-bar {
+    height: 100px
+  }
+
+  .exodus-logo-navbar{
+    font-size: 20px;
+    padding: 8px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+  .hamburger{
+    display: block;
+  }
+
+  .nav-bar {
+    height: 66px;
+    background: none #380764;
+    z-index: 1;
+  }
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    background-color: #380764;
+    width: 100%;
+    margin-top: 66px;
+  }
+
+  .navbar-list-item {
+    border-bottom: 1px solid rgba(191, 0, 255, 0.3);
+    padding-left: 28px;
+    font-family: 'Poppins', sans-serif; 
+  }
+
+  .exodus-logo-navbar{
+    display: block;
+    font-family: 'a Atmospheric', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    color: #BF00FF;
+    position: absolute;
+    width: 126px;
+    height: 40px;
+    left: 19px;
+    top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.12em;
+    padding: 0;
+  }
+
+}
+

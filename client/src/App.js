@@ -1,7 +1,6 @@
-import './App.css';
 import Nav from './componenets/Nav';
 import {Switch, Route} from 'react-router-dom';
-import Home from './pages/Home'
+import Home from './pages/home/Home';
 import About from './pages/About'
 import Submission from './pages/Submission'
 import FAQ from './pages/FAQ'
