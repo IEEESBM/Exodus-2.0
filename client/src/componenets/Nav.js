@@ -1,7 +1,7 @@
 import navData from "./nav-data";
 import { ReactComponent as Hamburger } from '../images/hamburger.svg';
 import './Nav.css'
-
+import {NavLink} from 'react-router-dom';
 function Navbar() {
 
   const toggle = () => {
@@ -26,9 +26,15 @@ function Navbar() {
       <ul className='navbar-list'>
         {
           navData.map((tabs) => {
+            var lin = "/" 
+            if (tabs != "home") {
+              lin += tabs
+            }
             return (
               <li className='navbar-list-item'>
-                <a href="#">{tabs}</a>
+                <NavLink to={lin}>
+                  {tabs}
+                </NavLink>
               </li>
             );
           })
