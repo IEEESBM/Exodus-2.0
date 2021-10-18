@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../../images/background.jpeg);
+  height: 1024px;
+}
+
+
+/* home page body */
+
+@import url('http://fonts.cdnfonts.com/css/a-atmospheric');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.home-page-body{
+  margin-left: 50vw;
+  text-align: center;
+}
+
+.about-heading
+{
+  /* ABOUT THE EVENT */
+
+position: absolute;
+width: 368px;
+height: 90px;
+left: 148px;
+top: 162px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 90px;
+/* identical to box height, or 225% */
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #18FFFF;
+
+
+}
+
+.about-para-1
+{
+  /* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. */
+  
+  position: absolute;
+  width: 740px;
+  height: 234px;
+left: 541px;
+top: 300px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0.05em;
+
+color: #BF00FF;
+}
+.about-para-2
+{
+  position: absolute;
+  width: 740px;
+  height: 234px;
+  left: 177px;
+  top: 636px;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  
+  color: #BF00FF;
+  
+}
+
+.about-para1-img
+{
+  position: absolute;
+  width: 319px;
+  height: 172px;
+  left: 156px;
+  top: 300px;
+  
+}
+.about-para2-img
+{
+  position: absolute;
+width: 306px;
+height: 251px;
+left: 986px;
+top: 594px;
+
+}
+
+.exodus-logo {
+  font-family: 'a Atmospheric', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 75px;
+  line-height: 90px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  color: #BF00FF;
+}
+
+.tag-line {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #BF00FF;
+  margin-top: 25px;
+}
+
+.home-page-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.home-page-buttons a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.home-page-buttons div {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 72px;
+  text-align: center;
+  color: rgba(24, 255, 255, 0.8);
+  background: #010031;
+  box-shadow: 1px 1px 20px rgba(24, 255, 255, 0.5);
+  border-radius: 15px;
+  width: 175px;
+  height: 72px;
+  transition: 200ms;
+}
+
+.home-page-buttons div:hover {
+  color: #18FFFF;
+}
+
+.home-page-image {
+  border-radius: 50%;
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  left: -110px;
+  top: -110px;
+  filter: drop-shadow(2px 5px 100px rgba(27, 245, 255,0.35));
+}
+
+.stars {
+  width: 100%;
+}
+
+.timer {
+  margin-top: -40px;
+  position: relative;
+}
+
+.timer-circles, .timer-colons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.dhms {
+  margin-top: 160px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .exodus-logo {
+    font-size: 55px;
+    line-height: 90px;
+    color: #BF00FF;
+  }
+
+  .home-page-image {
+    width: 600px;
+    height: 600px;
+    left: -87px;
+    top: -87px;
+  }
+
+  .tag-line {
+    font-size: 30px;
+  }
+
+  .home-page-buttons div {
+    font-size: 21px;
+    line-height: 50px;
+    border-radius: 13px;
+    width: 140px;
+    height: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  .exodus-logo {
+    font-size: 28px;
+    line-height: 50px;
+    color: #BF00FF;
+  }
+
+  .home-page-image {
+    width: 400px;
+    height: 400px;
+    left: -57px;
+    top: -57px;
+  }
+
+  .tag-line {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .home-page-buttons div {
+    font-size: 21px;
+    line-height: 50px;
+    border-radius: 13px;
+    width: 140px;
+    height: 50px;
+  }
+
+  .home-page-buttons div {
+    font-size: 12px;
+    line-height: 25px;
+    border-radius: 8px;
+    width: 80px;
+    height: 25px;
+    margin: 8px;
+  }
+
+  .home-page-buttons {
+    margin-top: -10px;
+  }
+
+  .timer-circles{
+    width: 250px;
+  }
+
+  .timer-colons {
+    width: 145px;
+  }
+
+  .dhms{
+    width: 217px;
+    margin-top: 80px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+  .home-page-image{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: -100px;
+    top: 30px;
+    z-index: -1;
+  }
+
+  .home-page-body{
+    margin-left: 0;
+  }
+
+  .exodus-logo {
+    display: none;
+  }
+
+  .tag-line {
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 10px;
+    margin-top: 440px;
+  }
+
+  .timer-circles{
+    width: 272px;
+    height: 50px;
+  }
+
+  .timer-colons {
+    width: 155px;
+  }
+
+  .dhms{
+    width: 240px;
+    height: 33px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+  .home-page-buttons {
+    flex-direction: column;
+  }
+
+  .home-page-buttons div {
+    width: 150px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 22px;
+    line-height: 60px;
+    margin: 20px auto;
+  }
+
+}
