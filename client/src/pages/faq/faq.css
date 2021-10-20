@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+.drone {
+  position: absolute;
+  top: 92px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.faq-heading {
+  position: absolute;
+  top: 261px;
+  width: 115px;
+  height: 70px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #18FFFF;
+  font-family: 'Roboto', sans-serif;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 170px;
+}
+
+.faq-container > div{
+  flex-grow: 1;
+  flex: 50%;
+}
+
+
+.faq-container article{
+  margin: 10px;
+  margin-bottom: 30px;
+  background: #010031;
+  border: 1px solid #010031;
+  box-shadow: 1px 1px 15px rgba(24, 255, 255, 0.5);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-container div{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: normal;
+  padding: 0.1em 0.3em;
+  color: #18FFFF;
+}
+
+.faq-container p{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding: 0em 0.4em 0em 0.9em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s;
+}
+
+.arrow{
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  height: 38px;
+  transition: 100ms;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+}
+
+@media only screen and (max-width: 992px) {
+
+  .faq-container > div{
+    flex-grow: 1;
+    flex: 100%;
+  }
+
+  .faq-container{
+    margin-top: 280px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+  .faq-container{
+    margin-top: 280px;
+  }
+
+  .drone{
+    width: 184px;
+    height: 114.29px;
+  }
+
+  .faq-heading {
+    font-size: 40px;
+    top: 187px;
+  }
+
+}
+
+
+
