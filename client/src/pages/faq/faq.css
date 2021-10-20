@@ -103,6 +103,10 @@
     margin-top: 280px;
   }
 
+  .faq-container div{
+    font-size: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -119,6 +123,10 @@
   .faq-heading {
     font-size: 40px;
     top: 187px;
+  }
+
+  .faq-container div{
+    font-size: 28px;
   }
 
 }
