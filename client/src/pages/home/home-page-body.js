@@ -18,7 +18,7 @@ function HomePageBody() {
       </article>
       <article className='home-page-buttons'>
         <a href="#"><div>register</div></a>
-        <a href="#"><div>timeline</div></a>
+        <a href="/timeline"><div>timeline</div></a>
         <a href="#"><div>rules</div></a>
       </article>
     </section>
