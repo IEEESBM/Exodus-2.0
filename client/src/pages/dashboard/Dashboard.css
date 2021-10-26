@@ -1,22 +1,26 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.dashboard-container{
-  display: flex;
-  justify-content: space-around;
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 .dashboard-left {
-  flex: 20%;
+    flex: 20%;
+    min-height: 100vh;
+    background-color: #40006C;
 }
 
 .dashboard-center {
-  flex: 60%;
+    flex: 60%;
 }
 
 .dashboard-right {
-  flex: 20%;
+    flex: 20%;
+    min-height: 100vh;
+    background-color: #40006C;
 }
