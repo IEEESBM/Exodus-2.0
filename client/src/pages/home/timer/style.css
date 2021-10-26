@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .App {
   display: flex;
   justify-content: space-around;
@@ -12,4 +13,20 @@
 }
 .Countdown{
   left: 500px
+=======
+.App {
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 0px;
+}
+
+.time {
+  font-size: 20px;
+}
+.Countdown{
+  left: 500px
+>>>>>>> 157405f820e269590449e7207336bb6c911ea71d
 }
