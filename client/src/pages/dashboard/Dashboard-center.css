@@ -12,6 +12,8 @@
     color: rgba(24, 255, 255, 0.8);
 }
 
+
+
 .dashboard-btn {
     text-transform: uppercase;
     text-decoration: none;
@@ -73,6 +75,7 @@
 }
 
 .team-link {
+    margin-right: 0.5rem;
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;

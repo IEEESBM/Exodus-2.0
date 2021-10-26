@@ -2,7 +2,7 @@ import Card from './component/Card';
 import perc from '../../images/rocket.svg';
 import Navbar from './component/Navbar';
 import Profile from './component/Profile';
-
+import './Dashboard-center.css'
 function DashboardCenter() {
     return (
       <>

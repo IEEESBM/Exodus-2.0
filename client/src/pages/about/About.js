@@ -1,11 +1,15 @@
 import AboutPageBody from "./about-page-body";
 import './about-page.css'
-import image from '../../images/home-page-image.jpeg';
+import paraimage1 from '../../images/aboutParaImg1.png';
+import paraimage2 from '../../images/aboutParaImg2.png';
 
 function App() {
   return (
     <>
       <AboutPageBody></AboutPageBody>
+      <img className='aboutPageParaImg1' src={paraimage1} alt='about-page-image1' />
+      <img className='aboutPageParaImg2' src={paraimage2} alt='about-page-image2' />
+
     </>
   );
 }

@@ -2,7 +2,6 @@ import DashboardCenter from "./Dashboard-center";
 import DashboardLeft from "./Dashboard-left";
 import DashboardRight from "./Dashboard-right";
 import './Dashboard.css'
-import './Dashboard-center.css';
 
 function Dashboard() {
   return (
