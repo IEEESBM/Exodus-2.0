@@ -2,26 +2,19 @@ import navData from "./nav-data";
 import { ReactComponent as Hamburger } from '../images/hamburger.svg';
 import './Nav.css'
 import {NavLink} from 'react-router-dom';
-import React from "react";
 function Navbar() {
 
   const toggle = () => {
 
-    const navList = document.querySelector('.navbar-list');
+    const hamburger = document.querySelector('.navbar-list');
 
-    if (navList.style.display === '') {
-      navList.style.display = 'block';
+    if (hamburger.style.display === '') {
+      hamburger.style.display = 'block';
     }
-    else if (navList.style.display === 'block') {
-      navList.style.display = '';
+    else if (hamburger.style.display === 'block') {
+      hamburger.style.display = '';
     }
 
-  }
-
-  const hideNavList = () => {
-    if (window.innerWidth<=576) {
-      document.querySelector('.navbar-list').style.display = '';
-    }
   }
 
   return (
@@ -38,7 +31,7 @@ function Navbar() {
               lin += tabs
             }
             return (
-              <li className='navbar-list-item' onClick={hideNavList}>
+              <li className='navbar-list-item'>
                 <NavLink to={lin}>
                   {tabs}
                 </NavLink>

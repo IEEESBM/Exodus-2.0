@@ -1,0 +1,122 @@
+/* ----------------- Navbar --------------------- */
+
+.nav-item {
+    margin-left: 1em;
+    margin-bottom: 2em;
+}
+
+.nav-icons {
+    margin-left: 1em;
+    font-size: larger;
+    /* color: #BF00D6; */
+    color: rgba(24, 255, 255, 0.8);
+}
+
+
+
+.dashboard-btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    color: rgba(24, 255, 255, 0.8);
+    background: #010031;
+    box-shadow: 1px 1px 20px rgba(24, 255, 255, 0.5);
+    border-radius: 15px;
+    transition: 200ms;
+}
+
+.dashboard-btn:hover {
+    color: #18FFFF;
+}
+
+.navbar-score {
+    margin-right: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(24, 255, 255, 0.8);
+}
+
+.nav-icons:hover {
+    color: #18FFFF;
+    transform: scale(1.2);
+}
+
+
+/* ----------------- Profile --------------------- */
+
+.user {
+    margin: 2em;
+}
+
+.profile-pic {
+    flex: 1;
+    padding-left: 10em;
+}
+
+.img-border {
+    border: 5px solid rgba(24, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.user-pic {
+    width: 5em;
+}
+
+.user-details {
+    color: #C8CADA;
+    flex: 2;
+}
+
+.team-link {
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    color: rgba(24, 255, 255, 0.8);
+    background: #010031;
+    box-shadow: 1px 1px 20px rgba(24, 255, 255, 0.5);
+    border-radius: 15px;
+    transition: 200ms;
+}
+
+.team-link:hover {
+    color: #18FFFF;
+}
+
+
+/* ----------------- Cards --------------------- */
+
+.cards-section {
+    margin: 1em;
+}
+
+.card {
+    border-radius: 2em;
+    box-shadow: rgb(34, 34, 34) 0px -1px 2px 2px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.card-img {
+    z-index: 2;
+    position: relative;
+    top: -2em;
+    width: 4rem;
+    transform: rotate3d(1, 2.0, 3.0, 10deg);
+}
+
+.card-body {
+    color: #C8CADA;
+}

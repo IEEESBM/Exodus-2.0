@@ -1,6 +1,8 @@
 import { ReactComponent as TimerCircles } from '../../images/timer-circles.svg';
 import { ReactComponent as TimerColons } from '../../images/timer-colons.svg';
 import { ReactComponent as Dhms } from '../../images/dhms.svg';
+import Timer from '../home/timer/timer'
+
 
 function HomePageBody() {
   return (
@@ -12,14 +14,10 @@ function HomePageBody() {
         We are almost there
       </article>
       <article className='timer'>
-        <TimerCircles className='timer-circles'></TimerCircles>
-        <TimerColons className='timer-colons'></TimerColons>
-        <Dhms className='dhms'></Dhms>
+          <Timer></Timer>
       </article>
       <article className='home-page-buttons'>
         <a href="#"><div>register</div></a>
-        <a href="/timeline"><div>timeline</div></a>
-        <a href="#"><div>rules</div></a>
       </article>
     </section>
   );
