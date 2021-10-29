@@ -18,7 +18,7 @@ form,label{
 
 .icon{
   margin-right: 1rem;
-  font-size: larger;
+  font-size: 2rem;
   color: rgba(24, 255, 255, 0.8);
 }
 
@@ -42,7 +42,7 @@ form,label{
     margin-top: 150px;
 }
 
-.dashboard-page-buttons {
+/* .dashboard-page-buttons {
   display: flex;
   justify-content: space-evenly;
   margin-top: 150px;
@@ -51,7 +51,7 @@ form,label{
 .dashboard-page-buttons a {
   text-decoration: none;
   text-align: center;
-}
+} */
 
 .dashboard-page-buttons div {
   text-transform: uppercase;

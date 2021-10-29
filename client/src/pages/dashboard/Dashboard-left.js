@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { Navbar, Nav } from 'rsuite';
 import 'rsuite/dist/rsuite.min.css';
@@ -7,6 +7,7 @@ import { ButtonToolbar, Button, Toggle, Placeholder } from 'rsuite';
 import Modal from 'rsuite/Modal';
 import './Dashboard-left.css'
 import '../home/home-page.css'
+import Timeline from './component/Timline'
 function DashboardLeft() {
   const [open, setOpen] = React.useState(false);
   const [overflow, setOverflow] = React.useState(true);
@@ -17,20 +18,20 @@ function DashboardLeft() {
   return (
     <>
       <div className='dashboard-left'>
-      <nav className="navbar navbar-expand-lg">
-            <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                    <NavLink to="/"><i class="far fa-bell icon"></i></NavLink>
-                    <NavLink to="/"><i class="fab fa-youtube icon "></i></NavLink>
-                </li>
-                
-            </ul>
+        <nav className="navbar navbar-expand-lg">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <NavLink to="/"><i class="far fa-bell icon"></i></NavLink>
+              <NavLink to="/"><i class="fab fa-youtube icon "></i></NavLink>
+            </li>
+
+          </ul>
         </nav>
-        <article>
-          <div className="modal-container">
-          <article className='dashboard-page-buttons'>
-            <a onClick={handleOpen}><div>Rules</div></a>
-          </article>
+        {/* <article> */}
+          {/* <div className="modal-container">
+            <article className='dashboard-page-buttons'>
+              <a onClick={handleOpen}><div>Rules</div></a>
+            </article>
 
             <Modal overflow={overflow} open={open} onClose={handleClose} >
               <Modal.Header appearance="primary">
@@ -51,8 +52,9 @@ function DashboardLeft() {
           </div>
         </article>
         <article className='dashboard-page-buttons'>
-          <a href="/submission"><div>Submit</div></a>
-        </article>
+          <a href="/submission"><div>Submission</div></a>
+        </article> */}
+        <Timeline />
       </div>
     </>
   );

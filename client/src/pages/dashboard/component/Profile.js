@@ -4,12 +4,13 @@ import { ButtonToolbar, Button, Toggle, Placeholder } from 'rsuite';
 import Modal from 'rsuite/Modal';
 import { dashBoardForm } from './DashForm'
 const Profile = (props) => {
-    const [open, setOpen] = React.useState(false);
+    const [openID, setOpenID] = React.useState(false);
+    const [openName, setOpenName] = React.useState(false);
     const [overflow, setOverflow] = React.useState(true);
-    const handleOpen = () => setOpen(true);
-    const handleOpen2 = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    const handleClose2 = () => setOpen(false);
+    const handleOpenID = () => setOpenID(true);
+    const handleOpenName = () => setOpenName(true);
+    const handleCloseID = () => setOpenID(false);
+    const handleCloseName = () => setOpenName(false);
     return (
         <div className="user d-flex flex-row justify-content-center align-items-center">
             <div className="profile-pic">
@@ -21,51 +22,51 @@ const Profile = (props) => {
                 <h3>Information</h3>
                 <p className="user-name">Admin</p>
                 <div className="user-team">
-                    <article className='dashboard-page-buttons'>
-                        <a onClick={handleOpen}><div>Team Id</div></a>
+                    {/* <article className='dashboard-page-buttons'> */}
+                    <Button onClick={handleOpenID} className="dashboard-btn">Team ID</Button>
 
-                        <Modal overflow={overflow} open={open} onClose={handleClose}>
-                            <Modal.Header>
-                                <Modal.Title>Team ID </Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Team ID</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                </div>
+                    <Modal overflow={overflow} open={openID} onClose={handleCloseID}>
+                        <Modal.Header>
+                            <Modal.Title>Team ID </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Team ID</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            </div>
 
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button onClick={handleClose} appearance="primary">
-                                    Ok
-                                </Button>
-                                <Button onClick={handleClose} appearance="subtle">
-                                    Cancel
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                        <a onClick={handleOpen}><div>Team Name</div></a>
-                        <Modal overflow={overflow} open={open} onClose={handleClose}>
-                            <Modal.Header>
-                                <Modal.Title>Team Name </Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Team Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                </div>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button onClick={handleCloseID} appearance="primary">
+                                Ok
+                            </Button>
+                            <Button onClick={handleCloseID} appearance="subtle">
+                                Cancel
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
 
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button onClick={handleClose} appearance="primary">
-                                    Ok
-                                </Button>
-                                <Button onClick={handleClose} appearance="subtle">
-                                    Cancel
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </article>
+                    <Button onClick={handleOpenName} className="dashboard-btn">Team Name</Button>
+                    <Modal overflow={overflow} open={openName} onClose={handleCloseName}>
+                        <Modal.Header>
+                            <Modal.Title>Team Name </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Team Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            </div>
+
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button onClick={handleCloseName} appearance="primary">
+                                Ok
+                            </Button>
+                            <Button onClick={handleCloseName} appearance="subtle">
+                                Cancel
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </div>
             </div>
         </div>
