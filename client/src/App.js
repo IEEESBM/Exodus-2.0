@@ -6,6 +6,7 @@ import FAQ from './pages/faq/FAQ'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login';
 import Dashboard from './pages/dashboard/Dashboard';
+import Submission from './pages/submission/Submission';
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/submission" component={Submission} />
       </Switch>
     </>
   );

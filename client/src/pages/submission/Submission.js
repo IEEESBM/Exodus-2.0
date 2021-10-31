@@ -2,7 +2,7 @@ import SubmissionPageBody from "./submission-page-body";
 import './submission-page.css';
 import rocket from '../../images/rocket.svg';
 
-function App() {
+function Submission() {
   return (
     <>
       <SubmissionPageBody imge={rocket} />
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default Submission;
