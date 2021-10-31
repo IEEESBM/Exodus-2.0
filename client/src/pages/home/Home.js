@@ -2,13 +2,15 @@ import HomePageBody from "./home-page-body";
 import './home-page.css'
 import image from '../../images/home-page-image.jpeg';
 import Stars from "./stars";
-import Nav from '../../componenets/Nav';
+import Navbar from "../../componenets/Nav";
+
+
 function App() {
   return (
     <>
-    <Nav/>
+      <Navbar></Navbar>
       <HomePageBody className='home-page-body'></HomePageBody>
-      <img className='home-page-image' src={image} alt='home-page-image' />
+      <img className='exodus-image' src={image} alt='home-page-image' />
       <Stars></Stars>
     </>
   );

@@ -2,7 +2,7 @@ import Data from './faq-data';
 import { ReactComponent as UpArrow } from '../../images/up-arrow.svg';
 import { ReactComponent as DownArrow } from '../../images/down-arrow.svg';
 import React from 'react';
-import Nav from '../../componenets/Nav';
+
 
 function FaqBody() {
 
@@ -20,7 +20,6 @@ function FaqBody() {
 
   return (
     <>
-    <Nav />
       <div className='faq-container'>
         {
           Data.map((content) => {

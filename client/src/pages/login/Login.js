@@ -1,28 +1,16 @@
-import './Signup.css'
-import { AiOutlineMail, AiOutlineLock, AiOutlineUser } from "react-icons/ai";
+import './Login.css'
+import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 
-function Signup() {
+function Login() {
   return (
     <>
       <div className='background'>
-        <div className='signup-container'>
-          <div className='signup-image'></div>
-          <div className='signup'>
+        <div className='login-container'>
+          <div className='login-image'></div>
+          <div className='login'>
             <div>
-              <h1>Sign Up</h1>
+              <h1>Log In</h1>
               <form action="#">
-              <div className='email'>
-                  <div>
-                    <AiOutlineUser className='username-icon'></AiOutlineUser>
-                  </div>
-                  <div>
-                    <label htmlFor="username">Username</label> 
-                    <br />
-                    <input required type="username" id="username" name="username" />
-                    <span className='username-error'>error</span>
-                  </div>
-                </div>
-
                 <div className='email'>
                   <div>
                     <AiOutlineMail className='email-icon'></AiOutlineMail>
@@ -47,7 +35,7 @@ function Signup() {
                   </div>
                 </div>
 
-                <button className="signup-button">Sign Up</button>
+                <button>Log In</button>
               </form>
             </div>
 
@@ -58,4 +46,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;

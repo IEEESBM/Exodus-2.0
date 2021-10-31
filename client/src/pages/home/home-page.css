@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+a:active, a:focus, a:hover {
+  text-decoration: none;
+}
+
 body {
   background: #010031;
   height: 1024px;
 }
 
-.home-page-body .home-page-image {
+.home-page-body .exodus-image {
   z-index: 1;
 }
 
@@ -79,7 +83,7 @@ body {
   color: #18FFFF;
 }
 
-.home-page-image {
+.exodus-image {
   border-radius: 50%;
   position: absolute;
   width: 750px;
@@ -466,7 +470,7 @@ body {
     color: #BF00FF;
   }
 
-  .home-page-image {
+  .exodus-image {
     width: 600px;
     height: 600px;
     left: -87px;
@@ -496,7 +500,7 @@ body {
     color: #BF00FF;
   }
 
-  .home-page-image {
+  .exodus-image {
     width: 400px;
     height: 400px;
     left: -57px;
@@ -550,7 +554,7 @@ body {
     height: 150vh !important;
   }
 
-  .home-page-image{
+  .exodus-image{
     position: absolute;
     width: 450px;
     height: 450px;
