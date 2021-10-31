@@ -37,12 +37,12 @@ const Profile = (props) => {
 
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button onClick={handleCloseID} appearance="primary">
-                                Ok
+                            <Button onClick={handleCloseID} color ="red" appearance="subtle">
+                                close
                             </Button>
-                            <Button onClick={handleCloseID} appearance="subtle">
+                            {/* <Button onClick={handleCloseID} appearance="subtle">
                                 Cancel
-                            </Button>
+                            </Button> */}
                         </Modal.Footer>
                     </Modal>
 
@@ -59,12 +59,12 @@ const Profile = (props) => {
 
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button onClick={handleCloseName} appearance="primary">
-                                Ok
+                            <Button onClick={handleCloseName} color ="red" appearance="subtle">
+                                close
                             </Button>
-                            <Button onClick={handleCloseName} appearance="subtle">
+                            {/* <Button onClick={handleCloseName} appearance="subtle">
                                 Cancel
-                            </Button>
+                            </Button> */}
                         </Modal.Footer>
                     </Modal>
                 </div>

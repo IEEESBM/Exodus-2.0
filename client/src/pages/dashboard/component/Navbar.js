@@ -30,11 +30,11 @@ function Navbar() {
                         <Paragraph rows={80} />
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={handleClose} appearance="primary">
+                        {/* <Button onClick={handleClose} appearance="primary">
                             Ok
-                        </Button>
-                        <Button onClick={handleClose} appearance="subtle">
-                            Cancel
+                        </Button> */}
+                        <Button onClick={handleClose} color ="red" appearance="subtle">
+                            close
                         </Button>
                     </Modal.Footer>
                 </Modal>

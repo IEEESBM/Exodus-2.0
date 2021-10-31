@@ -14,9 +14,9 @@
 }
 
 .dashboard-center {
-  flex: 60%;
+  flex: 55%;
 }
 
 .dashboard-right {
-  flex: 20%;
+  flex: 25%;
 }

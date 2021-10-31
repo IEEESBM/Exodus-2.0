@@ -83,3 +83,7 @@ form,label{
   top: -110px;
   filter: drop-shadow(2px 5px 100px rgba(27, 245, 255, 0.35));
 }
+
+.nav-item{
+  padding: 20px;
+}

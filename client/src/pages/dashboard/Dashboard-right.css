@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .dashboard-right{
+    padding: 0.2vw;
+    width: 100%;
+    max-width: 25%;
+  }
+  
+  .publicListHeading, .friendsHeading, .requestsHeading {
+    display: block;
+    margin-bottom: 0.5vw;
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+  }
+  
+  .dashboard-right > div {
+    border: solid 0.1vw #BF00FF;
+    border-radius: 1.5vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw black;
+    overflow-y: auto;
+  }
+  
+  .publicListContainer{
+    max-height: 50vh;
+    margin-bottom: 20px;
+  }
+  
+  .friendsContainer{
+    max-height: 25vh;
+    margin-bottom: 20px;
+  }
+  
+  .requestsContainer{
+    max-height: 25vh;
+    margin-bottom: 20px;
+  }
+  
+  hr {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #BF00FF;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .person {
+    padding: 0.3vw;
+    
+  }
+  
+  .profile-photo {
+    border-radius: 50%;
+    height: 2.8vw;
+    margin-right: 0.5vw;
+  }
+  
+  .user-name {
+    color: white;
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+  }
+  
+  .discord-id {
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .details {
+    line-height: 1.2vw;
+    overflow: hidden;
+    text-align: left;
+    width: 11vw;
+    -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
+  }
+  
+  
+  
+  .send-request, .remove-friend, .accept , .delete {
+    background-color: transparent;
+    color: #BF00FF;
+    border: #BF00FF solid 0.05vw;
+    border-radius: 0.5vw;
+    display: inline;
+    cursor: pointer;
+    transition: 200ms;
+    font-size: 0.8vw;
+    padding: 0.2vw;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .send-request:hover, .remove-friend:hover, .accept:hover , .delete:hover {
+    color: white;
+    border: white solid 0.05vw;
+    box-shadow: 0 0 0.1vw 0.1vw white;
+  }
+  
+  .person{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  

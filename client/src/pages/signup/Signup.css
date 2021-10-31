@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    height: 100%;
+  }
+  
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .signup-container{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+    display: flex;
+  }
+  
+  .signup h1 {
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  
+  .signup-image{
+    flex: 60%;
+    background-color: grey;
+  }
+  
+  .signup {
+    flex: 40%;
+    background-color: #010031;
+  }
+  
+  .signup > div {
+    
+  }
+  
+  
+  
+  .email, .password, .username {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+  }
+  
+  label {
+    color: rgba(191, 0, 255, 1);
+    font-size: 2vw;
+  }
+  
+  .email-error, .password-error, .username-error {
+    color: red;
+  }
+  
+  input {
+    border: 0;
+    background: transparent;
+    border-bottom: 2.5px solid #BF00FF;
+    color: white;
+    caret-color: aliceblue;
+    cursor: pointer;
+    transition: 200ms;
+    width: 100%;
+    font-size: 1.7vw;
+  }
+  
+  
+  input:focus {
+    outline: none !important;
+    border-color: white;
+  }
+  
+  .email-icon, .password-icon, .username-icon {
+    font-size: 3vw;
+    color: white;
+    margin-right: 1.5vw;
+  }
+  
+  button{
+    text-align: center;
+    color: rgba(24, 255, 255, 0.8);
+    background: #010031;
+    box-shadow: 1px 1px 20px rgba(24, 255, 255, 0.5);
+    border-radius: 15px;
+    font-size: 2vw;
+    width: 10vw;
+    margin:auto;
+    display:block;
+    margin-top: 4vh;
+    border: none;
+  }
+  
+  button:hover{
+    color: #18FFFF;
+    border: none;
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .signup-image{
+      display: none;
+    }
+  
+    .signup h1{
+      font-size: 9vw;
+    }
+  
+    label {
+      font-size: 6vw;
+    }
+  
+    input {
+      font-size: 4vw;
+    }
+  
+    .email-icon, .password-icon, .username-icon {
+      font-size: 8vw;
+      margin-right: 3vw;
+    }
+  
+    button{
+      font-size: 6vw;
+      width: 30vw;
+    }
+  }
