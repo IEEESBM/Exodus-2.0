@@ -1,61 +1,89 @@
-import { Form } from 'rsuite';
-
-function SubmissionPageBody() {
+import React from 'react';
+import Nav from '../../componenets/Nav'
+const SubmissionPageBody = (props) => {
     return (
-        // <section className='submission-page-body'>
-        //     <article>
-        //         <Form layout="horizontal">
-        //             <Form.Group controlId="name-6">
-        //                 <Form.ControlLabel>Code Link</Form.ControlLabel>
-        //                 <Form.Control name="name" />
-        //             </Form.Group>
-        //             <Form.Group controlId="name-6">
-        //                 <Form.ControlLabel>Website Link</Form.ControlLabel>
-        //                 <Form.Control name="name" />
-        //             </Form.Group>
-        //             <Form.Group controlId="name-6">
-        //                 <Form.ControlLabel>Description</Form.ControlLabel>
-        //                 <Form.Control name="name" />
-        //             </Form.Group>
-        //         </Form>
-        //     </article>
-        // </section>
-        <section className='submission-page-body'>
-            <h1>Flat Responsive Form</h1>
-            <div class="wpcf7" id="wpcf7-f156-p143-o1 formwrap">
-                <form action="/?page_id=143#wpcf7-f156-p143-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                    <div >
-                        <input type="hidden" name="_wpcf7" value="156"/>
-                            <input type="hidden" name="_wpcf7_version" value="3.7.2"/>
-                                <input type="hidden" name="_wpcf7_locale" value="en_US"/>
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f156-p143-o1"/>
-                                        <input type="hidden" name="_wpnonce" value="d1da331d93"/>
-                                        </div>
-                                        <p>
-                                            <span class="wpcf7-form-control-wrap Name">
-                                                <input type="text" name="Name" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name"/>
-                                            </span>
-                                            <span class="wpcf7-form-control-wrap Email">
-                                                <input type="email" name="Email" size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"/>
-                                            </span>
-                                            <span class="wpcf7-form-control-wrap Subject flat">
-                                                <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
-                                                    <option value="General">General</option>
-                                                    <option value="Booking">Booking</option>
-                                                </select>
-                                            </span>
-                                            <span class="wpcf7-form-control-wrap Message">
-                                                <textarea name="Message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea>
-                                            </span>
-                                            <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit btn" />
-                                                <img class="ajax-loader" src="http://www.jordancundiff.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..."  />
-                                            </p>
-                                                <div class="wpcf7-response-output wpcf7-display-none">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </section>
-                                    );
-}
+        <>
+        <Nav />
+        <div className="container submission-bg">
+      <section className="left-submission-container">
+        <h1 className="heading">Exodus -<br /> Final Call</h1>
+        <form action="">
+          
+          <div>
+            <label className="submission-form-label" htmlFor="name">
+              Group name:{" "}
+            </label>
+            <input
+              className="submission-form-input"
+              type="url"
+              id="name"
+              name="name"
+            />
+          </div>
+          <div>
+            <label className="submission-form-label" htmlFor="topic">Topic:
+            </label>
+            <input
+              className="submission-form-input"
+              type="url"
+              id="topic"
+              name="topic"
+            />
+          </div>
+          <div>
+            <label className="submission-form-label" htmlFor="link">
+              Submission Link:{" "}
+            </label>
+            <input
+              className="submission-form-input"
+              type="url"
+              id="link"
+              name="link"
+            />
+          </div>
+          <div>
+            <label className="submission-form-label" htmlFor="aid">
+              Other:{" "}
+            </label>
+            <textarea
+              className="submission-form-input"
+              rows="4"
+              id="aid"
+              name="aid"
+            />
+          </div>
 
-                                    export default SubmissionPageBody;
+          <button className="btn submission-form-btn" type="submit">
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section className="right-submission-container">
+        <div className="animation">
+          <img src={props.imge} alt="" />
+        </div>
+        <div className="details">
+          <p className="location">
+            <i class="fas fa-map-marker-alt"></i> 151 New Par Ave, Hartford, CT
+            06106 <br /> United States
+          </p>
+          <p className="phone">
+            <i class="fas fa-phone-alt"></i> +91 9090909090
+          </p>
+          <p className="email">
+            <i class="fas fa-envelope"></i> contactus@submission.com
+          </p>
+        </div>
+        <div className="social">
+          <i class="fab fa-facebook submission-social"></i>
+          <i class="fab fa-twitter-square submission-social"></i>
+          <i class="fab fa-instagram-square submission-social"></i>
+        </div>
+      </section>
+    </div>
+    </>
+  );
+};
+
+export default SubmissionPageBody;
