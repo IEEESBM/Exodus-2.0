@@ -1,7 +1,18 @@
 import './Signup.css'
 import { AiOutlineMail, AiOutlineLock, AiOutlineUser } from "react-icons/ai";
+import { useSelector, useDispatch } from 'react-redux';
+import { click } from '../../redux/signupSlice';
 
 function Signup() {
+  
+  const value = useSelector((state)=> state.signup.value)
+  const dispatch = useDispatch();
+
+  function press(){
+    console.log(click);
+    dispatch(click());
+  }
+
   return (
     <>
       <div className='background'>
@@ -9,8 +20,8 @@ function Signup() {
           <div className='signup-image'></div>
           <div className='signup'>
             <div>
-              <h1>Sign Up</h1>
-              <form action="#">
+              <h1 onClick={press}>Sign Up</h1>
+              <form>
               <div className='email'>
                   <div>
                     <AiOutlineUser className='username-icon'></AiOutlineUser>
@@ -19,7 +30,7 @@ function Signup() {
                     <label htmlFor="username">Username</label> 
                     <br />
                     <input required type="username" id="username" name="username" />
-                    <span className='username-error'>error</span>
+                    <span className='username-error'>{value}</span>
                   </div>
                 </div>
 
