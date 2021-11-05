@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from './componenets/Nav';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
@@ -7,6 +8,7 @@ import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login';
 import Dashboard from './pages/dashboard/Dashboard';
 import Submission from './pages/submission/Submission';
+
 function App() {
   return (
     <>

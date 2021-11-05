@@ -1,0 +1,34 @@
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+
+export const GET_USER = 'GET_USER';
+export const GET_USER_FAIL = 'GET_USER_FAIL';
+
+export const SET_MESSAGE = "SET_MESSAGE";
+export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
+
+export const GET_PUBLIC_USERS = 'GET_PUBLIC_USERS';
+export const GET_FRIENDS = 'GET_FRIENDS';
+export const GET_RECEIVED_REQUESTS = 'GET_RECIEVED_REQUESTS';
+export const GET_SENT_REQUESTS = 'GET_SENT_REQUESTS';
+export const GET_PUBLIC_USERS_FAIL = 'GET_PUBLIC_USERS_FAIL';
+export const GET_FRIENDS_FAIL = 'GET_FRIENDS_FAIL';
+export const GET_RECEIVED_REQUESTS_FAIL = 'GET_RECIEVED_REQUESTS_FAIL';
+export const GET_SENT_REQUESTS_FAIL = 'GET_SENT_REQUESTS_FAIL';
+export const TOGGLE_PUBLIC = 'TOGGLE_PUBLIC';
+export const SEND_REQUEST = 'SEND_REQUEST';
+export const ACCEPT_REQUEST = 'ACCEPT_REQUEST';
+
+
+// export const GET_USER = 'GET_USER';
+export const GET_TEAM = 'GET_TEAM';
+export const GET_TEAM_FAIL = 'GET_TEAM_FAIL';
+export const CREATE_TEAM = 'CREATE_TEAM';
+export const CREATE_TEAM_FAIL = 'CREATE_TEAM_FAIL';
+export const JOIN_TEAM = 'JOIN_TEAM';
+export const JOIN_TEAM_FAIL = 'JOIN_TEAM_FAIL';
+export const LEAVE_TEAM = 'LEAVE_TEAM';
+export const DELETE_TEAM = 'DELETE_TEAM';

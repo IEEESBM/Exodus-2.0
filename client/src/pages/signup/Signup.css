@@ -49,7 +49,7 @@ body{
 
 
 
-.email, .password, .username {
+.email, .password, .username ,.college, .phoneno{
   display: flex;
   align-items: center;
   width: 70%;
