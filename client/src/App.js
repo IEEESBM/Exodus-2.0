@@ -10,6 +10,8 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Submission from './pages/submission/Submission';
 import Verify from "./pages/Verify";
 
+require('dotenv').config();
+
 function App() {
   return (
     <>

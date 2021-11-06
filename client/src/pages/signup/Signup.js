@@ -265,7 +265,7 @@ function Signup() {
       </div> */}
       {/* <Nav/> */}
       <div className="container reg-form">
-      <h1 className="reg-heading">Register</h1>
+      <h1 className="reg-heading text-div">Register</h1>
       <div className="card">
       
               <Form onSubmit={handleRegister} ref={form}>

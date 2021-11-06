@@ -14,14 +14,18 @@ function AboutPageBody() {
       {/* <Aboutimg1 className="about-para1-img"></Aboutimg1> */}
       </article>
       <article className='about-para-1'>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-      </article>
+      For all the front-end web devs out there, IEEE Student Branch Manipal brings a wonderful opportunity in the form of EXODUS-an online front web development challenge where participants will have to use their skills in HTML, CSS and JavaScript to develop websites that revolve around the theme of helping humanity move to another planet in the future. EXODUS is as inclusive as it gets where people who are new to front-end development can also participate and hone their newly learned skills. 
+      <br/><br/> 
+      Cash prizes for the top three winners. 
+      <br/>This challenge is open to all college students. 
       
+      </article>
       <article>
       {/* <Aboutimg2 className="about-para2-img"></Aboutimg2> */}
       </article>
       {/* <article className='about-para-2'>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      Cash prizes for the top three winners. 
+      <br/>This challenge is open to all college students. 
       </article> */}
       
     </section>

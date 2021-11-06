@@ -83,9 +83,10 @@ function Navbar() {
           </li>
            </>
          ):(
-          <li className='navbar-list-item' onClick={hideNavList}>
-          <NavLink to="/login">Login</NavLink>
-          </li>
+           <></>
+          // <li className='navbar-list-item' onClick={hideNavList}>
+          // <NavLink to="/login">Login</NavLink>
+          // </li>
          )}
         
           <li className='navbar-list-item' onClick={hideNavList}>
