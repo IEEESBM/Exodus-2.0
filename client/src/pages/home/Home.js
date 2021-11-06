@@ -10,7 +10,11 @@ function App() {
     <>
       <Navbar></Navbar>
       <HomePageBody className='home-page-body'></HomePageBody>
-      <img className='exodus-image' src={image} alt='home-page-image' />
+      <div className="promo">
+    <div className="image-wrapper">
+    <img src={image}/>
+    </div>
+</div>
       <Stars></Stars>
     </>
   );

@@ -21,8 +21,8 @@ function DashboardLeft() {
         <nav className="navbar navbar-expand-lg">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <NavLink to="/"><i class="far fa-bell icon"></i></NavLink>
-              <NavLink to="/"><i class="fab fa-youtube icon "></i></NavLink>
+              <NavLink to="/"><i class="far fa-bell icon" ></i></NavLink>
+              <NavLink to="/"><i class="fab fa-youtube icon" ></i></NavLink>
             </li>
 
           </ul>

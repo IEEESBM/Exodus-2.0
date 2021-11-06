@@ -6,14 +6,20 @@
   
   .dashboard-right{
     padding: 0.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     width: 100%;
     max-width: 25%;
+    margin-top: 8vw;
+    background: #0b2159;
+    border-radius: 2.5vw;
   }
   
   .publicListHeading, .friendsHeading, .requestsHeading {
     display: block;
-    margin-bottom: 0vw;
-    font-size: 2.5vw;
+    margin-top: 1.1vw;
+    margin-bottom: 1.1vw;
+    font-size: 1.5vw;
     text-align: center;
     color: white;
     padding-top: 0;

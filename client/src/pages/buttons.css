@@ -1,0 +1,33 @@
+
+
+.button-neo {
+    cursor: pointer;
+    transition: color 0.2s ease-out, transform 0.2s ease-out;
+    color: #696969;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 25px;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0,0.1),
+                -4px -4px 6px #fff;
+                border-radius: 50%;
+   font-size: 20px;
+  }
+  
+  .button-neo:hover {
+      box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.1),
+      -4px -4px 10px #fff;
+  }
+  
+  .button-neo:focus {
+      outline: none;
+      box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.1),
+                  -4px -4px 10px #fff,
+                              4px 4px 10px 0 rgba(0,0,0,0.1) inset,
+                              -4px -4px 10px #fff inset;
+  }
+  
+  .button-neo:hover,
+  .button-neo:focus {
+      color: darkturquoise;
+  }
