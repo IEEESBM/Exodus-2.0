@@ -8,7 +8,7 @@ function AboutPageBody() {
   return (
     <section className='about-page-body'>
       <article className='about-heading'>
-        ABOUT THE EVENT
+        ABOUT EXODUS
       </article>
       <article>
       {/* <Aboutimg1 className="about-para1-img"></Aboutimg1> */}
