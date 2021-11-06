@@ -27,7 +27,7 @@ const getTimeHours = (time) => ((time % daySeconds) / hourSeconds) | 0;
 const getTimeDays = (time) => (time / daySeconds) | 0;
 
 export default function Timer() {
-  const dday = Date.parse('09 Nov 2021 00:00:00 GMT');
+  const dday = Date.parse('12 Nov 2021 00:00:00 GMT');
   const startTime = Date.now() / 1000; 
   const endTime = dday/1000;
 

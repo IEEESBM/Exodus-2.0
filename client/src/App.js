@@ -8,6 +8,7 @@ import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login';
 import Dashboard from './pages/dashboard/Dashboard';
 import Submission from './pages/submission/Submission';
+import Verify from "./pages/Verify";
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/faq" component={FAQ} />
-        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/register" component={Signup} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/submission" component={Submission} />
+        <Route exact path="/verification/:token" component={Verify}/>
       </Switch>
     </>
   );

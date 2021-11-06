@@ -9,7 +9,7 @@ function App() {
       <Nav />
       <AboutPageBody></AboutPageBody>
       <img className='aboutPageParaImg1' src={paraimage1} alt='about-page-image1' />
-      <img className='aboutPageParaImg2' src={paraimage2} alt='about-page-image2' />
+      {/* <img className='aboutPageParaImg2' src={paraimage2} alt='about-page-image2' /> */}
 
     </>
   );

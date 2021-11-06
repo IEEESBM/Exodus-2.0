@@ -9,8 +9,7 @@ import { isEmail } from "validator";
 import Stars from "../home/stars";
 import { register } from "../../actions/auth";
 import { AiOutlineMail, AiOutlineLock, AiOutlineUser } from "react-icons/ai";
-
-
+import Nav from "../../componenets/Nav";
 // Form Animation
 
 console.clear();
@@ -18,29 +17,29 @@ console.clear();
 const loginBtn = document.getElementById('login');
 const signupBtn = document.getElementById('signup');
 
-loginBtn.addEventListener('click', (e) => {
-	let parent = e.target.parentNode.parentNode;
-	Array.from(e.target.parentNode.parentNode.classList).find((element) => {
-		if(element !== "slide-up") {
-			parent.classList.add('slide-up')
-		}else{
-			signupBtn.parentNode.classList.add('slide-up')
-			parent.classList.remove('slide-up')
-		}
-	});
-});
+// loginBtn.addEventListener('click', (e) => {
+// 	let parent = e.target.parentNode.parentNode;
+// 	Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+// 		if(element !== "slide-up") {
+// 			parent.classList.add('slide-up')
+// 		}else{
+// 			signupBtn.parentNode.classList.add('slide-up')
+// 			parent.classList.remove('slide-up')
+// 		}
+// 	});
+// });
 
-signupBtn.addEventListener('click', (e) => {
-	let parent = e.target.parentNode;
-	Array.from(e.target.parentNode.classList).find((element) => {
-		if(element !== "slide-up") {
-			parent.classList.add('slide-up')
-		}else{
-			loginBtn.parentNode.parentNode.classList.add('slide-up')
-			parent.classList.remove('slide-up')
-		}
-	});
-});
+// signupBtn.addEventListener('click', (e) => {
+// 	let parent = e.target.parentNode;
+// 	Array.from(e.target.parentNode.classList).find((element) => {
+// 		if(element !== "slide-up") {
+// 			parent.classList.add('slide-up')
+// 		}else{
+// 			loginBtn.parentNode.parentNode.classList.add('slide-up')
+// 			parent.classList.remove('slide-up')
+// 		}
+// 	});
+// });
 
 // Animation ends
 
@@ -68,7 +67,7 @@ const vname = (value) => {
   if (value.length < 3 || value.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The username must be between 3 and 20 characters.
+        The Name must be between 3 and 20 characters.
       </div>
     );
   }
@@ -143,7 +142,7 @@ function Signup() {
 
   return (
     <>
-      <div className='background'>
+      {/* <div className='background'>
         <div className='signup-container'>
           <div className='signup-image'></div>
           <div className='signup'>
@@ -167,7 +166,6 @@ function Signup() {
                   onChange={onChangeName}
                   validations={[required, vname]}
                 />
-                    {/* <span className='username-error'>error</span> */}
                   </div>
                 </div>
 
@@ -186,7 +184,6 @@ function Signup() {
                   onChange={onChangeEmail}
                   validations={[required, validEmail]}
                 />
-                    {/* <span className='email-error'>error</span> */}
                   </div>
                 </div>
 
@@ -205,7 +202,6 @@ function Signup() {
                   onChange={onChangeCollege}
                   validations={[required]}
                 />
-                    {/* <span className='username-error'>error</span> */}
                   </div>
                 </div>
 
@@ -224,7 +220,6 @@ function Signup() {
                   onChange={onChangePhoneno}
                   validations={[required]}
                 />
-                    {/* <span className='username-error'>error</span> */}
                   </div>
                 </div>
 
@@ -243,7 +238,6 @@ function Signup() {
                   onChange={onChangePassword}
                   validations={[required, vpassword]}
                 />
-                    {/* <span className='password-error'>error</span> */}
                   </div>
                 </div>
 
@@ -268,6 +262,109 @@ function Signup() {
             <Stars></Stars>
           </div>
         </div>
+      </div> */}
+      {/* <Nav/> */}
+      <div className="container reg-form">
+      <h1 className="reg-heading">Register</h1>
+      <div className="card">
+      
+              <Form onSubmit={handleRegister} ref={form}>
+              {!successful && (
+                <>
+              <div className='email'>
+                  <div className="reg-inp">
+                    <label htmlFor="name">Name</label> 
+                    <br />
+                    <Input
+                  type="text"
+                  // className="form-control"
+                  name="name"
+                  value={name}
+                  onChange={onChangeName}
+                  validations={[required]}
+                />
+                  </div>
+                </div>
+
+                <div className='email'>
+                  <div className="reg-inp">
+                    <label htmlFor="email">Email</label> 
+                    <br />
+                    <Input
+                  type="text"
+                  // className="form-control"
+                  name="email"
+                  value={email}
+                  onChange={onChangeEmail}
+                  validations={[required, validEmail]}
+                />
+                  </div>
+                </div>
+
+                <div className='college'>
+                  <div className="reg-inp">
+                    <label htmlFor="college">College</label> 
+                    <br />
+                    <Input
+                  type="text"
+                  // className="form-control"
+                  name="college"
+                  value={college}
+                  onChange={onChangeCollege}
+                  validations={[required]}
+                />
+                  </div>
+                </div>
+
+                <div className='phoneno'>
+                  <div className="reg-inp">
+                    <label htmlFor="phoneno">Mobile No</label> 
+                    <br />
+                    <Input
+                  type="number"
+                  // className="form-control"
+                  name="phoneno"
+                  value={phoneno}
+                  onChange={onChangePhoneno}
+                  validations={[required]}
+                />
+                  </div>
+                </div>
+
+                <div className='password'>
+                  <div className="reg-inp">
+                    <label htmlFor="password">Password</label> 
+                    <br />
+                    <Input
+                  type="password"
+                  // className="form-control"
+                  name="password"
+                  value={password}
+                  onChange={onChangePassword}
+                  validations={[required, vpassword]}
+                />
+                  </div>
+                </div>
+
+                <button className="signup-button">Register</button>
+                </>
+              )}
+              {successful &&(
+                <div >
+                 <p className="verify-email">Verification Email Sent</p>
+                </div>
+              )}
+              {message && (
+            <div className="form-group">
+              <div className={ successful ? "alert alert-success" : "alert alert-danger" } role="alert">
+                {message}
+              </div>
+            </div>
+          )}
+          <CheckButton style={{ display: "none" }} ref={checkBtn} />
+              </Form>
+      </div>
+      {/* <Stars></Stars> */}
       </div>
     </>
   );

@@ -14,8 +14,9 @@ function App() {
     <div className="image-wrapper">
     <img src={image}/>
     </div>
+    
 </div>
-      <Stars></Stars>
+{/* <Stars></Stars> */}
     </>
   );
 }

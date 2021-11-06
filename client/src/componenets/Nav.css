@@ -44,7 +44,7 @@ ul{
 }
 
 .navbar-list-item:hover {
-  color: #18FFFF;
+  color: #ececec;
 }
 
 .hamburger{
@@ -57,8 +57,8 @@ ul{
 }
 
 .exodus-logo-navbar{
-    font-family: 'a Atmospheric', sans-serif;
-    font-style: normal;
+    font-family:  sans-serif;
+    font-style: italic;
     font-weight: normal;
     text-align: center;
     color: #BF00FF;
@@ -93,7 +93,7 @@ ul{
   }
 
   .nav-bar {
-    height: 100px
+    height: 80px
   }
 
   .exodus-logo-navbar{
@@ -111,7 +111,7 @@ ul{
 
   .nav-bar {
     position: relative;
-    height: 66px;
+    height: 50px;
     background: none #380764;
     z-index: 2;
   }
@@ -132,15 +132,16 @@ ul{
 
   .exodus-logo-navbar{
     display: block;
-    font-family: 'a Atmospheric', sans-serif;
-    font-style: normal;
+    /* font-family: 'a Atmospheric', sans-serif; */
+    font-family:  sans-serif;
+    font-style: italic;
     font-weight: normal;
     text-align: center;
     color: #BF00FF;
     position: absolute;
     width: 126px;
     height: 40px;
-    left: 19px;
+    /* left: 19px; */
     top: 16px;
     font-size: 20px;
     line-height: 20px;

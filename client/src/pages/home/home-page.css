@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-y: clip;
+  /* overflow-y: clip; */
 }
 
 
 body {
   background: #010031;
   height: 1024px;
-  overflow-y: clip;
+  /* overflow-y: clip; */
 }
 
 .home-page-body .exodus-image {
@@ -114,6 +114,7 @@ body {
 .night {
   position: relative;
   z-index: -1;
+  overflow:hidden;
   margin-top: -1250px;
   width: 100%;
   height: 95vw;
@@ -628,7 +629,7 @@ border-radius: 15px;
 position: relative;
 cursor: pointer;
 width: var(--size);
-height: 150vh;
+/* height: 150vh; */
 --overlay-color: hotpink;
 margin-top: -460px;
 margin-left: 55px;
@@ -638,7 +639,7 @@ border-radius: 100px;
 .image-wrapper {
 width: var(--size);
 height: var(--size);
-overflow: hidden;
+/* overflow: hidden; */
 clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
 transition: transform var(--duration) var(--ease-out),
 clip-path var(--duration) var(--ease-out);
@@ -698,7 +699,7 @@ opacity: 1;
 		-webkit-tap-highlight-color: transparent;
 }
 
-.button-register {
+.button-register{
   box-shadow: 0;
 	width: 210px;
 	height: 53px;
@@ -742,6 +743,48 @@ opacity: 1;
 	outline: none;
 }
 
+.button-verify{
+  box-shadow: 0;
+	width: 210px;
+	height: 53px;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+	transition: 500ms;
+}
+.button-verify:before{
+  content: 'Verify';
+	color: rgba(255,255,255,0.5);
+	font-size: 19px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 185px;
+	height: 40px;
+	background-color: #1b2845;
+	transition: 500ms;
+  border-radius: 5px;
+}
+.button-verify:hover {
+	background-position: right;
+}
+
+.button-verify:hover:before {
+	color: rgba(255,255,255,0.8);
+}
+
+.button-verify:focus {
+	outline: none;
+}
+
 
 
 /*Font*/
@@ -752,7 +795,7 @@ opacity: 1;
     text-transform: uppercase;
     font-size: 4em;
     letter-spacing: 4px;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: linear-gradient(90deg, #000, #fff, #000);
     background-repeat: no-repeat;
     background-size: 80%;
@@ -768,4 +811,20 @@ opacity: 1;
     100% {
       background-position: 500%;
     }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .text-div{
+      position: relative;
+      top:50px;
+    }
+    .image-wrapper{
+      position: relative;
+      top:-100px;
+      left:-25px;
+      overflow: hidden;
+    }
+    /* .night{
+      margin-top: -80px;
+    } */
   }

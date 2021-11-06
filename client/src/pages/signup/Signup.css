@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 body{
   height: 100%;
-}
+} */
 
 .background {
   width: 100vw;
@@ -96,7 +98,7 @@ input:focus {
   text-align: center;
   color: rgba(24, 255, 255, 0.8);
   background: #010031;
-  box-shadow: 1px 1px 20px rgba(24, 255, 255, 0.5);
+  
   border-radius: 15px;
   font-size: 2vw;
   width: 10vw;
@@ -154,7 +156,7 @@ html, body {
   position: relative;
   min-height: 100vh;
   background-color: #E1E8EE;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -168,7 +170,7 @@ html, body {
   height: 550px;
   width: 350px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .form-structor::after {
   content: "";
@@ -386,4 +388,46 @@ html, body {
   opacity: 1;
   visibility: visible;
   -webkit-transition: all 0.3s ease;
+}
+
+.reg-heading{
+  padding-top: 3%;
+  text-align: center;
+  color: #2dc7cb;
+  font-family: 'Poppins serif';
+}
+.card{
+  margin-top: 1em !important;
+  padding: 2%;
+  padding-top: 5%;
+  align-items: center;
+  background-color: #bf00ff31 !important;
+}
+
+.reg-inp{
+  width:80vw;
+}
+
+.signup-button{
+  padding:1%;
+  box-shadow: 0 0 0 0;
+}
+.signup-button:hover{
+  box-shadow: 1px 1px 20px rgba(24, 255, 255, 0.5);
+}
+
+input:active{
+  background-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+.verify-email{
+  text-align: center;
+  font-size: large;
 }

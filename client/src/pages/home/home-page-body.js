@@ -2,7 +2,7 @@ import { ReactComponent as TimerCircles } from '../../images/timer-circles.svg';
 import { ReactComponent as TimerColons } from '../../images/timer-colons.svg';
 import { ReactComponent as Dhms } from '../../images/dhms.svg';
 import Timer from '../home/timer/timer'
-
+import { NavLink } from 'react-router-dom';
 
 function HomePageBody() {
   return (
@@ -16,9 +16,10 @@ function HomePageBody() {
       <article className='timer'>
           <Timer></Timer>
       </article>
-      <button className="noselect button-register">
-        Register
-      </button>
+      
+        <NavLink to="/register"><button className="noselect button-register"> Register </button></NavLink>
+    
+
     </section>
   );
 }

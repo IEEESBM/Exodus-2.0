@@ -47,7 +47,7 @@ function Navbar() {
   return (
     <nav className='nav-bar'>
       <article className='exodus-logo-navbar'>
-        exodus <br /> &lt;/&gt;
+        @exodus <br /> 
       </article>
       <Hamburger onClick={toggle} className='hamburger' />
       <ul className='navbar-list'>

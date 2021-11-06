@@ -6,7 +6,7 @@
 
 body {
   background: url(../../images/background.jpeg);
-  height: 20vh
+  height: 135vh;
 }
 
 @import url("http://fonts.cdnfonts.com/css/a-atmospheric");
@@ -41,7 +41,8 @@ body {
 
 .about-para-1 {
   position: absolute;
-  width: 740px;
+  /* width: 740px; */
+  width: 50%;
   height: 234px;
   left: 541px;
   top: 300px;
@@ -135,7 +136,8 @@ body {
   }
   .about-para-1 {
     position: absolute;
-    width: 336px;
+    /* width: 336px; */
+    width:80%;
     height: 227px;
     left: 50px;
     top: 278px;

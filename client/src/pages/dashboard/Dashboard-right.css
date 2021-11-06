@@ -83,7 +83,7 @@
   
   .details {
     line-height: 1.2vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-align: left;
     width: 11vw;
     -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
