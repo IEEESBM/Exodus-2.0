@@ -397,7 +397,7 @@ html, body {
   font-family: 'Poppins serif';
 }
 .card{
-  margin-top: 1em !important;
+  /* margin-top: 1em !important; */
   padding: 2%;
   padding-top: 5%;
   align-items: center;
@@ -411,9 +411,10 @@ html, body {
 .signup-button{
   padding:1%;
   box-shadow: 0 0 0 0;
+  color: rgba(239 239 242);
 }
 .signup-button:hover{
-  box-shadow: 1px 1px 20px rgba(24, 255, 255, 0.5);
+  box-shadow: 1px 1px 20px rgb(239 239 242 / 45%);
 }
 
 input:active{
