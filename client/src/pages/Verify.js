@@ -7,7 +7,7 @@ import { Redirect, useParams } from "react-router";
 const Verify = (props)=>{
     const {token} = useParams();
     const onVerify = ()=>{
-        axios.get("http://localhost:4000/api/auth/verify-email",{
+        axios.get(process.env.REACT_APP+"auth/verify-email",{
             headers : {
                 'x-access-token':token
             }
