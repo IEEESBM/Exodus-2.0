@@ -14,8 +14,7 @@
 }
 
 .dashboard-btn {
-  text-transform: lowercase;
-  text-decoration: none;
+  /* text-decoration: none; */
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -60,6 +59,7 @@
 
 .user {
   padding: 0 !important;
+  overflow: hidden;
 }
 
 .profile-pic {

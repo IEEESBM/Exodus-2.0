@@ -2,7 +2,8 @@ import React from 'react';
 import 'rsuite/dist/rsuite.min.css';
 import { ButtonToolbar, Button, Toggle, Placeholder } from 'rsuite';
 import Modal from 'rsuite/Modal';
-import { dashBoardForm } from './DashForm'
+import { dashBoardForm } from './DashForm';
+import { Redirect } from 'react-router-dom';
 
 import { useSelector ,useDispatch} from 'react-redux';
 import { useState ,useEffect} from 'react';
@@ -15,13 +16,14 @@ const Profile = (props) => {
     const [overflow, setOverflow] = useState(true);
     const [userId,setUserId] = useState("");
     const [pocEmail,setPocEmail] = useState("");
+    const { isLoggedIn } = useSelector(state => state.auth);
 
     const handleOpenID = () => setOpenID(true);
     const handleOpenName = () => setOpenName(true);
     const handleCloseID = () => setOpenID(false);
     const handleCloseName = () => setOpenName(false);
 
-    const [teamId,setTeamId] = useState("");
+    const [teamID,setTeamID] = useState("");
     const [teamName,setTeamName] = useState("");
 
     const dispatch = useDispatch();
@@ -33,20 +35,18 @@ const Profile = (props) => {
 
     const onChangeTeamId = (e) =>{
         const teamid = e.target.value;
-        setTeamId(teamid);
+        console.log("Team ",teamid);
+        setTeamID(teamid);
     }
     const onChangeTeamName = (e)=>{
         const teamname = e.target.value;
         setTeamName(teamname);
     }
 
-    //remove after auth integration
-    // const userId = "617f84aee29435f1505ca140";
-    // const pocEmail = "bac@bac.com";
 
-    const handleJoinID = async(teamId)=>{
+    const handleJoinID = async(teamID)=>{
         
-        await dispatch(joinTeam(userId,teamId))
+        await dispatch(joinTeam(teamID))
         .then(async()=>{
             console.log('Joined Team');
             await getTeamData(userId);
@@ -98,9 +98,9 @@ const Profile = (props) => {
         })
     }
 
-    const leaveteam = async(teamId)=>{
+    const leaveteam = async(teamID)=>{
         setHasTeam(false);
-        await dispatch(leaveTeam(userId,teamId))
+        await dispatch(leaveTeam(teamID))
         .then(()=>{
             console.log('Leave team');
            
@@ -110,9 +110,9 @@ const Profile = (props) => {
         })
     }
 
-    const deleteteam = async(teamId)=>{
+    const deleteteam = async(teamID)=>{
         setHasTeam(false);
-        await dispatch(deleteTeam(userId,teamId))
+        await dispatch(deleteTeam(teamID))
         .then(async()=>{
             
             // await getTeamData(userId);
@@ -127,9 +127,12 @@ const Profile = (props) => {
         await dispatch(getUser())
 
     }
-
+    // if(!isLoggedIn){
+    //     return <Redirect to="/login"/>
+    // }
     useEffect(async()=>{
         // console.log('Profile');
+        
         await getUserData();
         await getTeamData();
     //    if(isUser){
@@ -148,6 +151,7 @@ const Profile = (props) => {
     },[isTeam])
 
     return (
+        
         <div className="user d-flex flex-row justify-content-center align-items-center">
             <div className="profile-pic">
                 <span className="img-border">
@@ -168,10 +172,10 @@ const Profile = (props) => {
                 {hasTeam &&(
  <div className="team-details">
      <h3 className="prof-h">Team Information</h3>
- <p>Team Name : {team.teamName}</p>
- <p>Team ID: {team.teamID}</p>
+ <p className="user-name">Team Name : {team.teamName}</p>
+ <p className="user-name">Team ID: {team.teamID}</p>
 {!isTeamLeader &&(
-    <Button onClick={()=>leaveteam(team.teamID)}>Leave Team</Button>
+    <Button className="team-btn" onClick={()=>leaveteam(team.teamID)}>Leave Team</Button>
 )}
  {isTeamLeader && (
     <Button className="team-btn" onClick={()=>deleteteam(team.teamID)}>Delete Team</Button>
@@ -192,12 +196,12 @@ const Profile = (props) => {
      <Modal.Body>
          <div class="mb-3">
              <label htmlFor="exampleInputEmail1" class="form-label">Team ID</label>
-             <input type="text" value={teamId} onChange={onChangeTeamId} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+             <input type="text" value={teamID} onChange={onChangeTeamId} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
          </div>
 
      </Modal.Body>
      <Modal.Footer>
-         <Button onClick={()=>handleJoinID(teamId)} color ="red" appearance="subtle">
+         <Button onClick={()=>handleJoinID(teamID)} color ="red" appearance="subtle">
              Join
          </Button>
          {/* <Button onClick={handleCloseID} appearance="subtle">
@@ -233,6 +237,7 @@ const Profile = (props) => {
                
             </div>
         </div>
+       
     )
 }
 
