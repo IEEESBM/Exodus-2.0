@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/faq" component={FAQ} />
         <Route exact path="/register" component={Signup} />
-        <Route exact path="/login" component={Login} />
+        {/* <Route exact path="/login" component={Login} /> */}
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/submission" component={Submission} />
         <Route exact path="/verification/:token" component={Verify}/>

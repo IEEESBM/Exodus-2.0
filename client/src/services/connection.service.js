@@ -3,8 +3,8 @@ import axios from "axios";
 const API_URL = process.env.REACT_APP_API;
 
 class ConnectionService{
-    togglePublic(id){
-        return axios.post(API_URL+'toggle-public/'+id)
+    togglePublic(id,discordid){
+        return axios.post(API_URL+'toggle-public/'+id,{discordid})
         .then((resp)=>{
             console.log(resp);
             return resp.data;

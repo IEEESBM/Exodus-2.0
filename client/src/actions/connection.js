@@ -14,9 +14,9 @@ import {
 
  import ConnectionService from '../services/connection.service';
 
-export const togglePublic = (id)=>{
+export const togglePublic = (id,discordid)=>{
     return (dispatch)=>{
-        return ConnectionService.togglePublic(id).then((resp)=>{
+        return ConnectionService.togglePublic(id,discordid).then((resp)=>{
             dispatch({
                 type:TOGGLE_PUBLIC,
                 payload:resp
