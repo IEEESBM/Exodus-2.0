@@ -9,8 +9,8 @@ class DashboardService{
             headers: authHeader()
         })
         .then((resp)=>{
-            console.log('get team service');
-            console.log(resp);
+            // console.log('get team service');
+            // console.log(resp);
             return resp.data;
         })
         .catch((err)=>{
@@ -18,13 +18,13 @@ class DashboardService{
         })
     }
     createTeam(teamName){
-        console.log(teamName);
+        // console.log(teamName);
         return axios.post(API_URL+"create",{teamName},
         {
             headers: authHeader()
         })
         .then((resp)=>{
-            console.log(resp);
+            // console.log(resp);
             return resp.data;
         })
         .catch((err)=>{
@@ -36,7 +36,7 @@ class DashboardService{
             headers: authHeader()
         })
         .then((resp)=>{
-            console.log(resp);
+            // console.log(resp);
             return resp.data;
         })
         .catch((err)=>{
@@ -48,7 +48,7 @@ class DashboardService{
             headers: authHeader()
         })
         .then((resp)=>{
-            console.log(resp);
+            // console.log(resp);
             return resp.data;
         })
         .catch((err)=>{
@@ -56,12 +56,12 @@ class DashboardService{
         })
     }
     deleteTeam(teamID){
-        console.log(teamID);
+        // console.log(teamID);
         return axios.post(API_URL+"delete",{teamID},{
             headers: authHeader()
         })
         .then((resp)=>{
-            console.log(resp);
+            // console.log(resp);
             return resp.data;
         })
         .catch((err)=>{

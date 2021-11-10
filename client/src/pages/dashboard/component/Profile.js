@@ -35,7 +35,7 @@ const Profile = (props) => {
 
     const onChangeTeamId = (e) =>{
         const teamid = e.target.value;
-        console.log("Team ",teamid);
+        // console.log("Team ",teamid);
         setTeamID(teamid);
     }
     const onChangeTeamName = (e)=>{
@@ -82,7 +82,7 @@ const Profile = (props) => {
     const getTeamData =async ()=>{
         await dispatch(getTeam())
         .then(()=>{
-            console.log(isTeam);
+            // console.log(isTeam);
             if(!isTeam){
                 setHasTeam(false);
             }
@@ -91,7 +91,7 @@ const Profile = (props) => {
                 setUserId(userData._id);
                 setPocEmail(userData.email);
             }
-            console.log(team);
+            // console.log(team);
         })
         .catch((err)=>{
             console.log(err);

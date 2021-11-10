@@ -33,7 +33,7 @@ function Navbar() {
                     	<li>You will be given a set of features to be implemented in your website.</li>
                         <li> You have to incorporate the theme in the best possible way in your website. </li> 
                         <li> Event ends at 11:59 PM sharp on 14th of November. </li>
-                        <li> You will be judged on how well you implement the given tasks. Judging Criteria is explained below. </li>
+                        <li> You will be judged on how well you implement the given tasks. </li>
                         <li> Results shall be announced within 7 days from 14th of November via Instagram handle of IEEE SBM (@ieeesbm) </li>
                         <li> Cash prizes are to be won by the best performing teams, along with Instagram shout out to the top 5 teams.</li>
                         <li> In case of any discrepancy, the authority to take the final decision lies with IEEE SBM.</li>
@@ -49,7 +49,7 @@ function Navbar() {
                     </Modal.Footer>
                 </Modal>
             
-                <a href="/submission"className="dashboard-btn">Submission</a>
+                {/* <a href="/submission"className="dashboard-btn">Submission</a> */}
                
     
         </ul>

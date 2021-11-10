@@ -31,10 +31,10 @@ import {
 export const getTeam = ()=>
     async(dispatch)=>{
         try{
-            console.log('GEt team action');
+            // console.log('GEt team action');
             const res = await DashboardService.getTeam();
 
-            console.log(res);
+            // console.log(res);
             // if(!res){
             //     console.log('res undefined');
             //     dispatch({

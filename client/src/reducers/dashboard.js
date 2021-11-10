@@ -27,8 +27,8 @@ export default function(state=initialState,action){
                 user:payload
             }
         case GET_TEAM:
-            console.log('GET_TEAM');
-            console.log(payload);
+            // console.log('GET_TEAM');
+            // console.log(payload);
             return{
                 ...state,
                 team:payload.team[0],
