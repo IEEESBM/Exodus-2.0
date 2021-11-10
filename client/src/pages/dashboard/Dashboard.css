@@ -104,4 +104,18 @@ box-shadow: 5px 5px 10px #de9db0,
               3px 3px 5px #00b33c;
 }
 
+.team-btn{
+  font-size:12px !important;
+  padding:8px 2px !important;
+}
+
+.rule-m{
+  color: white;
+}
+.css-102x5yh-TimelineItemContentWrapper{
+  min-height: 0px !important;
+}
+.prof-h{
+  font-size: 25px;
+}
 

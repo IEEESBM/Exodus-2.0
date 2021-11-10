@@ -59,7 +59,7 @@
 /* ----------------- Profile --------------------- */
 
 .user {
-  margin: 2em;
+  padding: 0 !important;
 }
 
 .profile-pic {
