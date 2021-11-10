@@ -157,24 +157,24 @@ const Profile = (props) => {
             <div className="user-details">
                 {isUser && (
                     <>
-                    <h3>User Information</h3>
-                <p className="user-name">Name:{userData.name}</p>
-                <p className="user-name">Email:{userData.email}</p>
-                <p className="user-name">College:{userData.college}</p>
-                <p className="user-name">Mobile No:{userData.phoneno}</p>
+                    <h3 className="prof-h">User Information</h3>
+                <p className="user-name">Name : {userData.name}</p>
+                <p className="user-name">Email : {userData.email}</p>
+                <p className="user-name">College : {userData.college}</p>
+                <p className="user-name">Mobile No : {userData.phoneno}</p>
                 </>
                 )}
                 
                 {hasTeam &&(
  <div className="team-details">
-     <h3>Team Information</h3>
+     <h3 className="prof-h">Team Information</h3>
  <p>Team Name : {team.teamName}</p>
  <p>Team ID: {team.teamID}</p>
 {!isTeamLeader &&(
     <Button onClick={()=>leaveteam(team.teamID)}>Leave Team</Button>
 )}
  {isTeamLeader && (
-    <Button onClick={()=>deleteteam(team.teamID)}>Delete Team</Button>
+    <Button className="team-btn" onClick={()=>deleteteam(team.teamID)}>Delete Team</Button>
  )}
  
 </div>

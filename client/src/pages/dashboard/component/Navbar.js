@@ -14,15 +14,15 @@ function Navbar() {
             <ul className="navbar-nav me-auto">
                 <li className="nav-item">
                     <NavLink to="/"><i className="fas fa-home nav-icons"></i></NavLink>
-                    <NavLink to="/about"><i class="fas fa-meteor nav-icons"></i></NavLink>
-                    <NavLink to="/faq"><i class="fas fa-user-astronaut nav-icons"></i></NavLink>
+                    <NavLink to="/about"><i className="fas fa-meteor nav-icons"></i></NavLink>
+                    <NavLink to="/faq"><i className="fas fa-user-astronaut nav-icons"></i></NavLink>
                 </li>
 
             </ul>
             <ul className="nav-item">
                <a onClick={handleOpen} className="dashboard-btn">Rules</a>
 
-                <Modal overflow={overflow} open={open} onClose={handleClose} >
+                <Modal className="rule-m" overflow={overflow} open={open} onClose={handleClose} >
                     <Modal.Header appearance="primary">
                         <Modal.Title >Rules </Modal.Title>
                     </Modal.Header>
