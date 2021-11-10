@@ -104,4 +104,10 @@ box-shadow: 5px 5px 10px #de9db0,
               3px 3px 5px #00b33c;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
 
