@@ -73,7 +73,7 @@ function Navbar() {
            <li className='navbar-list-item' onClick={hideNavList}>
            <NavLink to="/about">About</NavLink>
          </li>
-         {/* {currentUser ? (
+         {currentUser ? (
            <>
            <li className='navbar-list-item' onClick={hideNavList}>
           <NavLink to="/dashboard">Dashboard</NavLink>
@@ -83,11 +83,11 @@ function Navbar() {
           </li>
            </>
          ):(
-           <></>
+           
           <li className='navbar-list-item' onClick={hideNavList}>
           <NavLink to="/login">Login</NavLink>
           </li>
-         )} */}
+         )}
         
           <li className='navbar-list-item' onClick={hideNavList}>
           <NavLink to="/faq">FAQ</NavLink>
