@@ -37,7 +37,7 @@ function Navbar() {
                         <li> Results shall be announced within 7 days from 14th of November via Instagram handle of IEEE SBM (@ieeesbm) </li>
                         <li> Cash prizes are to be won by the best performing teams, along with Instagram shout out to the top 5 teams.</li>
                         <li> In case of any discrepancy, the authority to take the final decision lies with IEEE SBM.</li>
-
+                    </ul>
                     </Modal.Body>
                     <Modal.Footer>
                         {/* <Button onClick={handleClose} appearance="primary">
