@@ -9,6 +9,22 @@ import Login from './pages/login/Login';
 import Dashboard from './pages/dashboard/Dashboard';
 import Submission from './pages/submission/Submission';
 import Verify from "./pages/Verify";
+import styled from 'styled-components';
+import ResponsiveScreen from "./responsive";
+
+const Wrapper= styled.div`
+  box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  overflow: hidden;
+  
+  @media (max-width: 1024px) {
+    display: none;
+  }
+`;
+
 
 require('dotenv').config();
 
@@ -16,6 +32,7 @@ function App() {
   return (
     <>
       {/* <Nav /> */}
+      <Wrapper>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
@@ -26,6 +43,8 @@ function App() {
         <Route exact path="/submission" component={Submission} />
         <Route exact path="/verification/:token" component={Verify}/>
       </Switch>
+      </Wrapper>
+      <ResponsiveScreen />
     </>
   );
 }

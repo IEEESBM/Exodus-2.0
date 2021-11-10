@@ -90,7 +90,7 @@ function DashboardRight() {
   
   return (
     <>
-      <div className='dashboard-right'>
+      <div className='dashboard-right'>     
         <h1 className='publicListHeading'>Public List</h1>
         <div className='publicListContainer'>
           {/* {isAvailable && ( */}

@@ -8,7 +8,9 @@ import {
     LEAVE_TEAM,
     DELETE_TEAM,
     JOIN_TEAM_FAIL,
-    CREATE_TEAM_FAIL
+    CREATE_TEAM_FAIL,
+    SUBMIT_WEBSITE,
+    SUBMIT_WEBSITE_FAIL
 } from "./types";
 
 // export const getUser = (id)=>{
@@ -85,10 +87,10 @@ export const createTeam = (teamName)=>
     
 }
 
-export const joinTeam = (teamId)=>
+export const joinTeam = (teamID)=>
     async(dispatch)=>{
         try{
-            const res = await DashboardService.joinTeam(teamId);
+            const res = await DashboardService.joinTeam(teamID);
           if(res){
             dispatch({
                 type:JOIN_TEAM,
@@ -113,10 +115,10 @@ export const joinTeam = (teamId)=>
     
 }
 
-export const leaveTeam = (teamId)=>
+export const leaveTeam = (teamID)=>
     async(dispatch)=>{
         try{
-            const res = await DashboardService.leaveTeam(teamId);
+            const res = await DashboardService.leaveTeam(teamID);
             console.log(res);
             dispatch({
                 type:LEAVE_TEAM,
@@ -129,10 +131,10 @@ export const leaveTeam = (teamId)=>
     
 }
 
-export const deleteTeam = (teamId)=>
+export const deleteTeam = (teamID)=>
     async(dispatch)=>{
         try{
-            const res = await DashboardService.deleteTeam(teamId);
+            const res = await DashboardService.deleteTeam(teamID);
             dispatch({
                 type:DELETE_TEAM,
                 payload:res.data
@@ -143,3 +145,19 @@ export const deleteTeam = (teamId)=>
         }
     
 }
+
+export const submitWebsite = (websiteLink,details,topic) =>
+    async(dispatch)=>{
+        try{
+            const res = await DashboardService.submitWebsite(websiteLink,details,topic);
+            // if(res){
+                dispatch({
+                    type:SUBMIT_WEBSITE,
+                    payload:res
+                })
+            // }
+        }
+        catch(err){
+            console.log(err);
+        }
+    }

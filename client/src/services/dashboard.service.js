@@ -31,8 +31,8 @@ class DashboardService{
             console.log(err);
         })
     }
-    joinTeam(teamId){
-        return axios.post(API_URL+"/join",{teamID:teamId},{
+    joinTeam(teamID){
+        return axios.post(API_URL+"join",{teamID},{
             headers: authHeader()
         })
         .then((resp)=>{
@@ -43,8 +43,8 @@ class DashboardService{
             console.log(err);
         })
     }
-    leaveTeam(teamId){
-        return axios.post(API_URL+"/leave",{teamID:teamId},{
+    leaveTeam(teamID){
+        return axios.post(API_URL+"leave",{teamID},{
             headers: authHeader()
         })
         .then((resp)=>{
@@ -55,12 +55,24 @@ class DashboardService{
             console.log(err);
         })
     }
-    deleteTeam(teamId){
-        return axios.post(API_URL+"/delete",{teamID:teamId},{
+    deleteTeam(teamID){
+        console.log(teamID);
+        return axios.post(API_URL+"delete",{teamID},{
             headers: authHeader()
         })
         .then((resp)=>{
             console.log(resp);
+            return resp.data;
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
+    submitWebsite(websiteLink,details,topic){
+        return axios.post(API_URL+'submit',{websiteLink,details,topic},{
+            headers: authHeader()
+        })
+        .then((resp)=>{
             return resp.data;
         })
         .catch((err)=>{

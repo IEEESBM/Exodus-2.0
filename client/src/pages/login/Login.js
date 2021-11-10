@@ -53,7 +53,7 @@ function Login(props) {
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(login(email, password))
         .then(() => {
-          props.history.push("/dashboard");
+          props.history.push("/");
           window.location.reload();
         })
         .catch(() => {
@@ -69,7 +69,7 @@ function Login(props) {
   }
   return (
     <>
-      <div className='background'>
+      {/* <div className='background'>
         <div className='login-container'>
           <div className='login-image'></div>
           <div className='login'>
@@ -91,7 +91,7 @@ function Login(props) {
               onChange={onChangeEmail}
               validations={[required]}
             />
-                    {/* <span className='email-error'>error</span> */}
+                
                   </div>
                 </div>
 
@@ -129,6 +129,61 @@ function Login(props) {
 
           </div>
         </div>
+      </div> */}
+        <div className="container reg-form">
+      <h1 className="reg-heading">Login</h1>
+      <div className="card">
+      
+              <Form onSubmit={handleLogin} ref={form}>
+  
+                <>
+
+                <div className='email'>
+                  <div className="reg-inp">
+                    <label htmlFor="email">Email</label> 
+                    <br />
+                    <Input
+                  type="text"
+                  // className="form-control"
+                  name="email"
+                  value={email}
+                  onChange={onChangeEmail}
+                  validations={[required]}
+                />
+                  </div>
+                </div>
+
+              
+
+                <div className='password'>
+                  <div className="reg-inp">
+                    <label htmlFor="password">Password</label> 
+                    <br />
+                    <Input
+                  type="password"
+                  // className="form-control"
+                  name="password"
+                  value={password}
+                  onChange={onChangePassword}
+                  validations={[required]}
+                />
+                  </div>
+                </div>
+
+                <button className="signup-button">Login</button>
+                </>
+              
+              {message && (
+            <div className="form-group">
+              <div className="alert alert-danger" role="alert">
+                {message}
+              </div>
+            </div>
+          )}
+          <CheckButton style={{ display: "none" }} ref={checkBtn} />
+              </Form>
+      </div>
+      {/* <Stars></Stars> */}
       </div>
     </>
   );

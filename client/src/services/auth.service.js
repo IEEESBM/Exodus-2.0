@@ -37,6 +37,7 @@ class AuthService {
       headers:authHeader()
     })
     .then((resp)=>{
+      console.log(resp.data);
       return resp.data;
     })
     .catch((err)=>{

@@ -32,3 +32,5 @@ export const JOIN_TEAM = 'JOIN_TEAM';
 export const JOIN_TEAM_FAIL = 'JOIN_TEAM_FAIL';
 export const LEAVE_TEAM = 'LEAVE_TEAM';
 export const DELETE_TEAM = 'DELETE_TEAM';
+export const SUBMIT_WEBSITE = 'SUBMIT_WEBSITE';
+export const SUBMIT_WEBSITE_FAIL = 'SUBMIT_WEBSITE_FAIL';

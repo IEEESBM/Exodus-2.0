@@ -7,7 +7,9 @@ import{
     JOIN_TEAM,
     GET_TEAM_FAIL,
     JOIN_TEAM_FAIL,
-    CREATE_TEAM_FAIL
+    CREATE_TEAM_FAIL,
+    SUBMIT_WEBSITE,
+    SUBMIT_WEBSITE_FAIL
 } from "../actions/types";
 
 const initialState = {
@@ -76,6 +78,18 @@ export default function(state=initialState,action){
                 ...state,
                 team:payload
             }
+        case SUBMIT_WEBSITE:
+            return{
+                ...state,
+                team:payload,
+                hasSubmitted:true
+                }
+        case SUBMIT_WEBSITE_FAIL:
+            return{
+                ...state,
+                team:payload,
+                hasSubmitted:false
+                    }
         default:
             return state;
     }
