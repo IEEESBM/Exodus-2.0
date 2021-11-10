@@ -58,30 +58,7 @@ const SubmissionPageBody = (props) => {
           </button>
         </form>
       </section>
-
-      <section className="right-submission-container">
-        <div className="animation">
-          <img src={props.imge} alt="" />
-        </div>
-        <div className="details">
-          <p className="location">
-            <i class="fas fa-map-marker-alt"></i> 151 New Par Ave, Hartford, CT
-            06106 <br /> United States
-          </p>
-          <p className="phone">
-            <i class="fas fa-phone-alt"></i> +91 9090909090
-          </p>
-          <p className="email">
-            <i class="fas fa-envelope"></i> contactus@submission.com
-          </p>
-        </div>
-        <div className="social">
-          <i class="fab fa-facebook submission-social"></i>
-          <i class="fab fa-twitter-square submission-social"></i>
-          <i class="fab fa-instagram-square submission-social"></i>
-        </div>
-      </section>
-    </div>
+ </div>
     </>
   );
 };

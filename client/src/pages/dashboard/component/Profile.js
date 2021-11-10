@@ -182,7 +182,8 @@ const Profile = (props) => {
                {!hasTeam &&(
  <div className="user-team">
  {/* <article className='dashboard-page-buttons'> */}
- <Button onClick={handleOpenID} className="dashboard-btn">Join Team</Button>
+
+ <Button onClick={handleOpenID} className="profile-dashboard dashboard-btn">Join Team</Button>
 
  <Modal overflow={overflow} open={openID} onClose={handleCloseID}>
      <Modal.Header>
@@ -204,8 +205,8 @@ const Profile = (props) => {
          </Button> */}
      </Modal.Footer>
  </Modal>
-
- <Button onClick={handleOpenName} className="dashboard-btn">Create Team</Button>
+<br />
+ <Button onClick={handleOpenName} className="profile-dashboard dashboard-btn">Create Team</Button>
  <Modal overflow={overflow} open={openName} onClose={handleCloseName}>
      <Modal.Header>
          <Modal.Title>Create Team </Modal.Title>
@@ -219,13 +220,36 @@ const Profile = (props) => {
      </Modal.Body>
      <Modal.Footer>
          <Button onClick={()=>handleCreateTeam(teamName)} color ="red" appearance="subtle">
-             close
+             Submit
          </Button>
          {/* <Button onClick={handleCloseName} appearance="subtle">
              Cancel
          </Button> */}
      </Modal.Footer>
  </Modal>
+<br />
+ <Button onClick={handleOpenName} className="profile-dashboard dashboard-btn">Find Team</Button>
+ <Modal overflow={overflow} open={openName} onClose={handleCloseName}>
+     <Modal.Header>
+         <Modal.Title>Find Team </Modal.Title>
+     </Modal.Header>
+     <Modal.Body>
+         <div class="mb-3">
+             <label htmlFor="exampleInputEmail1" class="form-label">Discord ID</label>
+             <input type="text" value={teamName} onChange={onChangeTeamName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+         </div>
+
+     </Modal.Body>
+     <Modal.Footer>
+         <Button onClick={()=>handleCreateTeam(teamName)} color ="red" appearance="subtle">
+             Submit
+         </Button>
+         {/* <Button onClick={handleCloseName} appearance="subtle">
+             Cancel
+         </Button> */}
+     </Modal.Footer>
+ </Modal>
+
 </div>
                )}
                

@@ -29,6 +29,7 @@ body {
   border-radius: 2rem;
   backdrop-filter: blur(2rem);
   display: flex;
+  float: center;
 }
 
 .left-submission-container {

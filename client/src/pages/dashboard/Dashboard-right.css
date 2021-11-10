@@ -13,6 +13,17 @@
     margin-top: 8vw;
     background: #0b2159;
     border-radius: 2.5vw;
+    border-width: 0px 0px 0px 6px;
+    border-color: snow;
+    border-style: solid;
+  }
+
+  .horizontal-rule {
+    width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center;
+  }
+
+  .rule-text {
+    font-size: 16px; background-color: #F3F5F6; padding: 0 10px;
   }
   
   .publicListHeading, .friendsHeading, .requestsHeading {
@@ -52,7 +63,7 @@
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    color: #BF00FF;
+    color: silver;
     margin-top: 0;
     margin-bottom: 0;
   }
