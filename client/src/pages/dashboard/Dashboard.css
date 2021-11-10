@@ -11,16 +11,13 @@
 }
 
 .dashboard-left {
-  flex: 20%;
+  flex: 15%;
 }
 
 .dashboard-center {
-  flex: 55%;
+  flex: 85%;
 }
 
-.dashboard-right {
-  flex: 25%;
-}
 
 .neo-button {
   width: 170px;

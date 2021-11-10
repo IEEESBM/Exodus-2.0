@@ -70,10 +70,10 @@ buttons.forEach(btn => {
                     " Plan a trip for your customers showcasing destinations and flight option along with prices and services offered. Your final bill should show the total price clearly" />
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
-                    <Card imgsrc={theme2} bgcolor="#7033FF" cardtext="•	The human race, in order to extend its lineage has decided on sending its species in the future by the means of frozen gametes which can be used to give birth to human species in the future. Make a website where people can register themselves and ensure that their genes do get passed onto the next generation by paying a certain price. Make a live slot counter where the number of slots decrease with time. The receipt should contain total price. " />
+                    <Card imgsrc={theme2} bgcolor="#7033FF" cardtext="The human race, in order to extend its lineage has decided on sending its species in the future by the means of frozen gametes which can be used to give birth to human species in the future. Make a website where people can register themselves and ensure that their genes do get passed onto the next generation by paying a certain price. Make a live slot counter where the number of slots decrease with time. The receipt should contain total price. " />
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
-                    <Card imgsrc={theme3} bgcolor="#F65164" cardtext="•	In the future, the cure to most of the diseases has been found in the form of capsules. Capsule price should be mentioned clearly and user should be given the option to buy multiple capsules. The receipt should show total price of medicines." />
+                    <Card imgsrc={theme3} bgcolor="#F65164" cardtext="In the future, the cure to most of the diseases has been found in the form of capsules. Capsule price should be mentioned clearly and user should be given the option to buy multiple capsules. The receipt should show total price of medicines." />
                 </div>
             </div>
         </div>

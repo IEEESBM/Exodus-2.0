@@ -227,28 +227,6 @@ const Profile = (props) => {
          </Button> */}
      </Modal.Footer>
  </Modal>
-<br />
- <Button onClick={handleOpenName} className="profile-dashboard dashboard-btn">Find Team</Button>
- <Modal overflow={overflow} open={openName} onClose={handleCloseName}>
-     <Modal.Header>
-         <Modal.Title>Find Team </Modal.Title>
-     </Modal.Header>
-     <Modal.Body>
-         <div class="mb-3">
-             <label htmlFor="exampleInputEmail1" class="form-label">Discord ID</label>
-             <input type="text" value={teamName} onChange={onChangeTeamName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-         </div>
-
-     </Modal.Body>
-     <Modal.Footer>
-         <Button onClick={()=>handleCreateTeam(teamName)} color ="red" appearance="subtle">
-             Submit
-         </Button>
-         {/* <Button onClick={handleCloseName} appearance="subtle">
-             Cancel
-         </Button> */}
-     </Modal.Footer>
- </Modal>
 
 </div>
                )}

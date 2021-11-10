@@ -9,7 +9,6 @@ function Dashboard() {
       <div className='dashboard-container'>
         <DashboardLeft></DashboardLeft>
         <DashboardCenter></DashboardCenter>
-        <DashboardRight></DashboardRight>
       </div>
     </>
   );
