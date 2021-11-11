@@ -146,10 +146,10 @@ export const deleteTeam = (teamID)=>
     
 }
 
-export const submitWebsite = (websiteLink,details,topic) =>
+export const submitWebsite = (repoLink,websiteLink,details,topic) =>
     async(dispatch)=>{
         try{
-            const res = await DashboardService.submitWebsite(websiteLink,details,topic);
+            const res = await DashboardService.submitWebsite(repoLink,websiteLink,details,topic);
             // if(res){
                 dispatch({
                     type:SUBMIT_WEBSITE,

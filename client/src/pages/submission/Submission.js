@@ -27,6 +27,7 @@ function Submission(props) {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
 
+  const [repoLink,setRepoLink] = useState("");
   const [websiteLink,setWebsiteLink] = useState("");
   const [details,setDetails] = useState("");
   const [topic,setTopic] = useState("");
@@ -35,6 +36,10 @@ function Submission(props) {
   const onChangeTeamName = (e) => {
     const teamName = e.target.value;
     setTeamName(teamName);
+  };
+  const onChangeRepoLink = (e) => {
+    const repoLink = e.target.value;
+    setRepoLink(repoLink);
   };
 
   const onChangeWebsiteLink = (e) => {
@@ -61,7 +66,7 @@ function Submission(props) {
 
     if (checkBtn.current.context._errors.length === 0) {
       // console.log(websiteLink,details,topic);
-      dispatch(submitWebsite(websiteLink,details,topic))
+      dispatch(submitWebsite(repoLink,websiteLink,details,topic))
         .then(() => {
           props.history.push("/dashboard");
           window.location.reload();
@@ -111,8 +116,22 @@ function Submission(props) {
             </Select>
           </div>
           <div>
+            <label className="submission-form-label" htmlFor="rlink">
+              Repository Link:{" "}
+            </label>
+            <Input
+              type="url"
+              className="sub-link submission-form-input"
+              name="repoLink"
+              id="repoLink"
+              value={repoLink}
+              onChange={onChangeRepoLink}
+              validations={[required]}
+            />
+          </div>
+          <div>
             <label className="submission-form-label" htmlFor="link">
-              Submission Link:{" "}
+              Website Link:{" "}
             </label>
             <Input
               type="url"
@@ -153,6 +172,7 @@ function Submission(props) {
        </Form>
       </section>
  </div>
+ <div></div>
     </>
   );
 }

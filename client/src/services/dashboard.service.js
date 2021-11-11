@@ -68,11 +68,12 @@ class DashboardService{
             console.log(err);
         })
     }
-    submitWebsite(websiteLink,details,topic){
-        return axios.post(API_URL+'submit',{websiteLink,details,topic},{
+    submitWebsite(repoLink,websiteLink,details,topic){
+        return axios.post(API_URL+'submit',{repoLink,websiteLink,details,topic},{
             headers: authHeader()
         })
         .then((resp)=>{
+            // console.log(resp.data);
             return resp.data;
         })
         .catch((err)=>{

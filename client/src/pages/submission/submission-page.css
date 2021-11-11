@@ -23,6 +23,7 @@ body {
 }
 
 .submission-bg {
+  margin-top: -50px;
   background: white;
   min-height: 80vh;
   width: 70%;
@@ -90,6 +91,7 @@ body {
   border-radius: 2em;
   cursor: pointer;
   border: 2px solid white;
+  margin-top:0px !important;
 }
 
 .submission-form-btn:focus,

@@ -49,7 +49,7 @@ function Navbar() {
                     </Modal.Footer>
                 </Modal>
             
-                {/* <a href="/submission"className="dashboard-btn">Submission</a> */}
+                <a href="/submission"className="dashboard-btn">Submission</a>
                
     
         </ul>
