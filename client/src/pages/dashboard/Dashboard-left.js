@@ -21,7 +21,8 @@ function DashboardLeft() {
         <nav className="navbar navbar-expand-lg">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <NavLink to="https://youtu.be/Ve-bTKyvXW4"><i class="fab fa-youtube icon" ></i></NavLink>
+              {/* <NavLink to="https://youtu.be/Ve-bTKyvXW4"><i class="fab fa-youtube icon" ></i></NavLink> */}
+              <a target="_blank" href="https://youtu.be/JteHoBDqt0M"><i class="fab fa-youtube icon" ></i></a>
             </li>
 
           </ul>
