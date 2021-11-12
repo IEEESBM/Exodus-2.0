@@ -55,7 +55,7 @@ export const getTeam = ()=>
                 type:GET_TEAM_FAIL,
                 payload:undefined
             })
-            console.log(err);
+            // console.log(err);
         }
     
 }
@@ -83,7 +83,7 @@ export const createTeam = (teamName)=>
                 type:CREATE_TEAM_FAIL,
                 payload:undefined
             })
-            console.log(err);
+            // console.log(err);
         }
     
 }
@@ -99,7 +99,7 @@ export const joinTeam = (teamID)=>
                 })
           }
           else{
-              console.log('Action join fail');
+            //   console.log('Action join fail');
               dispatch({
                   type:JOIN_TEAM_FAIL,
                   payload:undefined
@@ -120,14 +120,14 @@ export const leaveTeam = (teamID)=>
     async(dispatch)=>{
         try{
             const res = await DashboardService.leaveTeam(teamID);
-            console.log(res);
+            // console.log(res);
             dispatch({
                 type:LEAVE_TEAM,
                 payload:res
                 })
         }
         catch(err){
-            console.log(err);
+            // console.log(err);
         }
     
 }
@@ -142,7 +142,7 @@ export const deleteTeam = (teamID)=>
                 })
         }
         catch(err){
-            console.log(err);
+            // console.log(err);
         }
     
 }

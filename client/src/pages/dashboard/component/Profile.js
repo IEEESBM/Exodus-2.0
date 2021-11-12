@@ -48,7 +48,7 @@ const Profile = (props) => {
         
         await dispatch(joinTeam(teamID))
         .then(async()=>{
-            console.log('Joined Team');
+            // console.log('Joined Team');
             await getTeamData(userId);
             if(isTeam){
                 setHasTeam(true);
@@ -69,7 +69,7 @@ const Profile = (props) => {
         await dispatch(createTeam(teamName))
         .then(async()=>{
             
-            console.log('Team Created');
+            // console.log('Team Created');
             await getTeamData(userId);
         })
         .catch((err)=>{
@@ -94,7 +94,7 @@ const Profile = (props) => {
             // console.log(team);
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
 
@@ -102,11 +102,11 @@ const Profile = (props) => {
         setHasTeam(false);
         await dispatch(leaveTeam(teamID))
         .then(()=>{
-            console.log('Leave team');
+            // console.log('Leave team');
            
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
 
@@ -116,10 +116,10 @@ const Profile = (props) => {
         .then(async()=>{
             
             // await getTeamData(userId);
-            console.log('Delete team');
+            // console.log('Delete team');
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
 

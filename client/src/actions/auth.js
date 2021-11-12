@@ -14,7 +14,7 @@ import {
   export const register = (name, email, password,college,phoneno) => (dispatch) => {
     return AuthService.register(name, email, password,college,phoneno).then(
       (response) => {
-        console.log(response);
+        // console.log(response);
         dispatch({
           type: REGISTER_SUCCESS,
         });
@@ -49,10 +49,10 @@ import {
   };
   
   export const login = (email, password) => (dispatch) => {
-    console.log("Action login");
+    // console.log("Action login");
     return AuthService.login(email, password).then(
       (data) => {
-        console.log(data);
+        // console.log(data);
         dispatch({
           type: LOGIN_SUCCESS,
           payload: { user: data },

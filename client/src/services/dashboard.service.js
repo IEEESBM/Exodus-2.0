@@ -14,7 +14,7 @@ class DashboardService{
             return resp.data;
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
     createTeam(teamName){
@@ -28,7 +28,7 @@ class DashboardService{
             return resp.data;
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
     joinTeam(teamID){
@@ -40,7 +40,7 @@ class DashboardService{
             return resp.data;
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
     leaveTeam(teamID){
@@ -52,7 +52,7 @@ class DashboardService{
             return resp.data;
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
     deleteTeam(teamID){
@@ -65,7 +65,7 @@ class DashboardService{
             return resp.data;
         })
         .catch((err)=>{
-            console.log(err);
+            // console.log(err);
         })
     }
     submitWebsite(repoLink,websiteLink,details,topic){
