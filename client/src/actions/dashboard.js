@@ -10,7 +10,8 @@ import {
     JOIN_TEAM_FAIL,
     CREATE_TEAM_FAIL,
     SUBMIT_WEBSITE,
-    SUBMIT_WEBSITE_FAIL
+    SUBMIT_WEBSITE_FAIL,
+    SET_MESSAGE
 } from "./types";
 
 // export const getUser = (id)=>{
@@ -146,18 +147,64 @@ export const deleteTeam = (teamID)=>
     
 }
 
+// export const submitWebsite = (repoLink,websiteLink,details,topic) =>
+//     async(dispatch)=>{
+//         try{
+//             const res = await DashboardService.submitWebsite(repoLink,websiteLink,details,topic);
+//             // if(res){
+//                 console.log(res);
+//                 dispatch({
+//                     type:SUBMIT_WEBSITE,
+//                     payload:res
+//                 })
+//                 dispatch({
+//                     type:SET_MESSAGE,
+//                     payload:res.data.message
+//                 })
+//             // }
+//         }
+//         catch(error){
+//         const message =
+//           (error.response &&
+//             error.response.data &&
+//             error.response.data.message) ||
+//           error.message ||
+//           error.toString();
+//             console.log(error);
+//         }
+//     }
+
 export const submitWebsite = (repoLink,websiteLink,details,topic) =>
-    async(dispatch)=>{
-        try{
-            const res = await DashboardService.submitWebsite(repoLink,websiteLink,details,topic);
-            // if(res){
+    (dispatch)=>{
+        return DashboardService.submitWebsite(repoLink,websiteLink,details,topic).then(
+            (response)=>{
+                // console.log(response);
                 dispatch({
                     type:SUBMIT_WEBSITE,
-                    payload:res
-                })
-            // }
-        }
-        catch(err){
-            console.log(err);
-        }
+                    payload:response.data.updatedTeam
+                });
+                dispatch({
+                    type:SET_MESSAGE,
+                    payload:response.data.message
+                });
+                return Promise.resolve();
+            },
+            (error)=>{
+                const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+            // console.log(error);
+            dispatch({
+                type:SUBMIT_WEBSITE_FAIL,
+                payload:undefined
+            })
+            dispatch({
+                type:SET_MESSAGE,
+                payload:message
+            })
+            }
+        )
     }

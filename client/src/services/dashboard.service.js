@@ -72,13 +72,13 @@ class DashboardService{
         return axios.post(API_URL+'submit',{repoLink,websiteLink,details,topic},{
             headers: authHeader()
         })
-        .then((resp)=>{
-            // console.log(resp.data);
-            return resp.data;
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
+        // .then((resp)=>{
+        //     console.log(resp);
+        //     return resp;
+        // })
+        // .catch((err)=>{
+        //     console.log(err);
+        // })
     }
 }
 

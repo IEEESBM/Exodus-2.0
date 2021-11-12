@@ -2,7 +2,7 @@ import SubmissionPageBody from "./submission-page-body";
 import './submission-page.css';
 import rocket from '../../images/rocket.svg';
 import Nav from '../../componenets/Nav';
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -24,8 +24,12 @@ function Submission(props) {
   const form = useRef();
   const checkBtn = useRef();
   const { message } = useSelector(state => state.message);
+  const {hasSubmitted} = useSelector(state =>{
+    // console.log(state.dashboard.hasSubmitted);
+    return state.dashboard});
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
+  const [successful,setSuccessful] = useState(false);
 
   const [repoLink,setRepoLink] = useState("");
   const [websiteLink,setWebsiteLink] = useState("");
@@ -67,17 +71,36 @@ function Submission(props) {
     if (checkBtn.current.context._errors.length === 0) {
       // console.log(websiteLink,details,topic);
       dispatch(submitWebsite(repoLink,websiteLink,details,topic))
-        .then(() => {
-          props.history.push("/dashboard");
-          window.location.reload();
+        .then((res) => {
+        //  console.log(hasSubmitted);
+          // props.history.push("/dashboard");
+          // window.location.reload();
+          // if(hasSubmitted){
+          //   setSuccessful(true);
+          // }
+          // else{
+          //   setSuccessful(false);
+          // }
+            
+         
         })
         .catch(() => {
+          setSuccessful(false);
           setLoading(false);
         });
     } else {
       setLoading(false);
     }
   };
+
+  useEffect(()=>{
+    if(hasSubmitted){
+      setSuccessful(true);
+    }
+    else{
+      setSuccessful(false);
+    }
+  },[hasSubmitted])
 
   return (
     <>
@@ -86,8 +109,11 @@ function Submission(props) {
         <div className="container submission-bg">
       <section className="left-submission-container">
         <h1 className="heading head-sub">Exodus - Final Call</h1>
+        
         <Form onSubmit={handleSubmit} ref={form} className="subm-form">
-          
+        
+        {!successful && (
+          <div>
           {/* <div>
             <label className="submission-form-label" htmlFor="name">
               Group name:
@@ -102,6 +128,7 @@ function Submission(props) {
               validations={[required]}
             />
           </div> */}
+        
           <div>
             <label className="submission-form-label" htmlFor="topic">Topic:
             </label>
@@ -160,15 +187,17 @@ function Submission(props) {
           <button className="btn submission-form-btn" type="submit">
             Submit
           </button>
-       
+          </div>
+       )}
           {message && (
             <div className="form-group">
-              <div className="alert alert-danger" role="alert">
+              <div className={successful ? "alert alert-success":"alert alert-danger"} role="alert">
                 {message}
               </div>
             </div>
           )}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
+         
        </Form>
       </section>
  </div>

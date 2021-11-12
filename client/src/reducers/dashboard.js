@@ -16,7 +16,8 @@ const initialState = {
     user:{},
     team:{},
     isTeam:false,
-    isTeamLeader:false
+    isTeamLeader:false,
+    hasSubmitted:false
 }
 export default function(state=initialState,action){
     const {type,payload} = action;
@@ -85,6 +86,7 @@ export default function(state=initialState,action){
                 hasSubmitted:true
                 }
         case SUBMIT_WEBSITE_FAIL:
+            // console.log('submit fail');
             return{
                 ...state,
                 team:payload,
