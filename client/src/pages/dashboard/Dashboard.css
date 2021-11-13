@@ -121,4 +121,10 @@ box-shadow: 5px 5px 10px #de9db0,
 .prof-h{
   font-size: 25px;
 }
-
+/* .rule-ul{
+  display: list-item;
+  list-style-type: disc;
+} */
+.rule-h{
+  font-size: 16px;
+}
