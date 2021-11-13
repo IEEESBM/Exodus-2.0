@@ -832,3 +832,7 @@ opacity: 1;
       margin-top: -80px;
     } */
   }
+
+  .btn-reghome{
+    visibility: hidden;
+  }

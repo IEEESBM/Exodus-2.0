@@ -17,7 +17,7 @@ function HomePageBody() {
           <Timer></Timer>
       </article>
       
-        <NavLink to="/register"><button className="noselect button-register"> Register </button></NavLink>
+        <NavLink to="/register"><button className="noselect button-register btn-reghome"> Register </button></NavLink>
     
 
     </section>
