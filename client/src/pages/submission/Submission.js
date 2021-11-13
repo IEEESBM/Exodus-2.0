@@ -137,6 +137,7 @@ function Submission(props) {
             value={topic} 
             validations={[required]} 
             onChange={onChangeTopic}>
+              <option value=""></option>
                 <option value="Interplanetary Airline">Interplanetary Airline</option>
                 <option value="Cryopreservation">Cryopreservation</option>
                 <option value="Cure it all Pharmacy">Cure it all Pharmacy</option>
