@@ -108,26 +108,13 @@ function Submission(props) {
       <Nav />
         <div className="container submission-bg">
       <section className="left-submission-container">
-        <h1 className="heading head-sub">Exodus - Final Call</h1>
+        <h1 className="heading head-sub">Submissions Closed</h1>
         
-        <Form onSubmit={handleSubmit} ref={form} className="subm-form">
+        {/* <Form onSubmit={handleSubmit} ref={form} className="subm-form">
         
         {!successful && (
           <div>
-          {/* <div>
-            <label className="submission-form-label" htmlFor="name">
-              Group name:
-            </label>
-            <Input
-              type="text"
-              className="submission-form-input"
-              name="name"
-              id="name"
-              value={teamName}
-              onChange={onChangeTeamName}
-              validations={[required]}
-            />
-          </div> */}
+          
         
           <div>
             <label className="submission-form-label" htmlFor="topic">Topic:
@@ -199,7 +186,8 @@ function Submission(props) {
           )}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
          
-       </Form>
+       </Form> */}
+       
       </section>
  </div>
  <div></div>
